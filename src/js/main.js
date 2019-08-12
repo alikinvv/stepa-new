@@ -3,7 +3,11 @@ let main = new Swiper('.main .swiper-container', {
     autoplay: {
         delay: 10000,
     },
-    effect: 'fade'
+    effect: 'fade',
+    navigation: {
+        nextEl: '.main-next',
+        prevEl: '.main-prev'
+    },
 });
 
 let f1 = new Swiper('.f1 .swiper-container', {
@@ -169,7 +173,7 @@ let modalApartments = new Swiper('.modal .swiper-container', {
     navigation: {
         nextEl: '.modal-next',
         prevEl: '.modal-prev'
-    },
+    }
 });
 
 $('body').on('click', '.view__nav a', (e) => {
@@ -186,8 +190,6 @@ $('body').on('click', '.ways__nav a:not(.active)', (e) => {
 
     $('.ways__tab[data-tab="' + $(e.currentTarget).attr('data-tab') + '"]').addClass('active');
 });
-
-$('.ways__body').height($('.ways__body').height() + 40);
 
 $('body').on('click', '.company__nav a:not(.active)', (e) => {
     $(e.currentTarget).parent().find('a').removeClass('active');
@@ -220,15 +222,13 @@ $('body').on('click', '.callme__close', (e) => {
 var myMap = null;
 ymaps.ready(function () {
     var myMapFooter = new ymaps.Map('footer', {
-            center: [58.038414, 56.038119],
+            center: [58.010016, 56.262016],
             zoom: 16.3    
         }, {
             searchControlProvider: 'yandex#search'
         }),
 
-        myPlacemark = new ymaps.Placemark([58.038414, 56.038119], {
-            hintContent: 'Собственный значок метки',
-            balloonContent: 'Это красивая метка'
+        myPlacemark = new ymaps.Placemark([58.010016, 56.262016], {
         }, {
             // Опции.
             // Необходимо указать данный тип макета.
@@ -253,69 +253,69 @@ ymaps.ready(function () {
             searchControlProvider: 'yandex#search'
         }),
 
-        shop1 = new ymaps.Placemark([58.038118, 56.032042], {category: 'shop'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/shop.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        shop2 = new ymaps.Placemark([58.039357, 56.025136], {category: 'shop'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/shop.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        shop3 = new ymaps.Placemark([58.038535, 56.029513], {category: 'shop'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/shop.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        shop4 = new ymaps.Placemark([58.036072, 56.022655], {category: 'shop'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/shop.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        shop5 = new ymaps.Placemark([58.034599, 56.023633], {category: 'shop'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/shop.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        shop6 = new ymaps.Placemark([58.035764, 56.029896], {category: 'shop'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/shop.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        shop7 = new ymaps.Placemark([58.034659, 56.024409], {category: 'shop'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/shop.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        shop8 = new ymaps.Placemark([58.039590, 56.027315], {category: 'shop'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/shop.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        shop9 = new ymaps.Placemark([58.034636, 56.030551], {category: 'shop'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/shop.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        shop10 = new ymaps.Placemark([58.034662, 56.031614], {category: 'shop'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/shop.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        shop11 = new ymaps.Placemark([58.034653, 56.032624], {category: 'shop'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/shop.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        shop12 = new ymaps.Placemark([58.034677, 56.033664], {category: 'shop'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/shop.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        shop13 = new ymaps.Placemark([58.034604, 56.036577], {category: 'shop'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/shop.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        shop14 = new ymaps.Placemark([58.036198, 56.035630], {category: 'shop'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/shop.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        shop15 = new ymaps.Placemark([58.036826, 56.034624], {category: 'shop'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/shop.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        stadium = new ymaps.Placemark([58.039882, 56.034070], {category: 'stadium'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/stadium.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        saloon1 = new ymaps.Placemark([58.039287, 56.027594], {category: 'saloon'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/barber.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        saloon2 = new ymaps.Placemark([58.039287, 56.027594], {category: 'saloon'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/barber.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        saloon3 = new ymaps.Placemark([58.033363, 56.020714], {category: 'saloon'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/barber.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        saloon4 = new ymaps.Placemark([58.034684, 56.029507], {category: 'saloon'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/barber.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        saloon5 = new ymaps.Placemark([58.032692, 56.028813], {category: 'saloon'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/barber.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        saloon6 = new ymaps.Placemark([58.034085, 56.032750], {category: 'saloon'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/barber.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        saloon7 = new ymaps.Placemark([58.034163, 56.034133], {category: 'saloon'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/barber.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        saloon8 = new ymaps.Placemark([58.035683, 56.036193], {category: 'saloon'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/barber.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        saloon9 = new ymaps.Placemark([58.036733, 56.034946], {category: 'saloon'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/barber.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        coffee1 = new ymaps.Placemark([58.039651, 56.027246], {category: 'coffee'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/cafe.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        coffee2 = new ymaps.Placemark([58.039681, 56.026263], {category: 'coffee'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/cafe.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        coffee3 = new ymaps.Placemark([58.034159, 56.021893], {category: 'coffee'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/cafe.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        coffee4 = new ymaps.Placemark([58.034641, 56.025579], {category: 'coffee'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/cafe.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        coffee5 = new ymaps.Placemark([58.035288, 56.025701], {category: 'coffee'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/cafe.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        coffee6 = new ymaps.Placemark([58.036063, 56.038523], {category: 'coffee'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/cafe.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        bank1 = new ymaps.Placemark([58.039269, 56.025066], {category: 'banks'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/card.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        bank2 = new ymaps.Placemark([58.037904, 56.032292], {category: 'banks'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/card.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        bank3 = new ymaps.Placemark([58.036875, 56.034821], {category: 'banks'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/card.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        bank4 = new ymaps.Placemark([58.034707, 56.028667], {category: 'banks'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/card.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        bank5 = new ymaps.Placemark([58.034647, 56.036881], {category: 'banks'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/card.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        bank6 = new ymaps.Placemark([58.034667, 56.024451], {category: 'banks'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/card.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        bank7 = new ymaps.Placemark([58.032691, 56.028875], {category: 'banks'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/card.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        bank8 = new ymaps.Placemark([58.034687, 56.030212], {category: 'banks'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/card.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        bus1 = new ymaps.Placemark([58.039048, 56.025877], {category: 'bus'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/bus.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        bus2 = new ymaps.Placemark([58.038888, 56.027541], {category: 'bus'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/bus.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        bus3 = new ymaps.Placemark([58.039131, 56.030283], {category: 'bus'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/bus.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        bus4 = new ymaps.Placemark([58.038963, 56.033022], {category: 'bus'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/bus.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        baby1 = new ymaps.Placemark([58.039554, 56.030242], {category: 'baby'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/baby.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        baby2 = new ymaps.Placemark([58.038135, 56.024039], {category: 'baby'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/baby.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        baby3 = new ymaps.Placemark([58.033464, 56.032918], {category: 'baby'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/baby.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        school1 = new ymaps.Placemark([58.038563, 56.040285], {category: 'school'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/school.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        school2 = new ymaps.Placemark([58.038683, 56.035456], {category: 'school'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/school.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        school3 = new ymaps.Placemark([58.037200, 56.036230], {category: 'school'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/school.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        school4 = new ymaps.Placemark([58.035368, 56.035608], {category: 'school'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/school.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        school5 = new ymaps.Placemark([58.033444, 56.035229], {category: 'school'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/school.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        school6 = new ymaps.Placemark([58.035640, 56.032475], {category: 'school'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/school.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        school7 = new ymaps.Placemark([58.035003, 56.027563], {category: 'school'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/school.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        school8 = new ymaps.Placemark([58.035283, 56.023799], {category: 'school'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/school.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        school9 = new ymaps.Placemark([58.036737, 56.024646], {category: 'school'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/school.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        ambulance1 = new ymaps.Placemark([58.037506, 56.023601], {category: 'ambulance'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/ambulance.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        ambulance2 = new ymaps.Placemark([58.039426, 56.025685], {category: 'ambulance'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/ambulance.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        ambulance3 = new ymaps.Placemark([58.035861, 56.024696], {category: 'ambulance'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/ambulance.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        ambulance4 = new ymaps.Placemark([58.037976, 56.031916], {category: 'ambulance'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/ambulance.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        ambulance5 = new ymaps.Placemark([58.038167, 56.034725], {category: 'ambulance'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/ambulance.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        ambulance6 = new ymaps.Placemark([58.036905, 56.034821], {category: 'ambulance'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/ambulance.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        ambulance7 = new ymaps.Placemark([58.034657, 56.032314], {category: 'ambulance'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/ambulance.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
-        ambulance8 = new ymaps.Placemark([58.034626, 56.035102], {category: 'ambulance'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/ambulance.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        shop1 = new ymaps.Placemark([58.038118, 56.032042], {category: 'shop'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/shop2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        shop2 = new ymaps.Placemark([58.039357, 56.025136], {category: 'shop'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/shop2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        shop3 = new ymaps.Placemark([58.038535, 56.029513], {category: 'shop'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/shop2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        shop4 = new ymaps.Placemark([58.036072, 56.022655], {category: 'shop'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/shop2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        shop5 = new ymaps.Placemark([58.034599, 56.023633], {category: 'shop'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/shop2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        shop6 = new ymaps.Placemark([58.035764, 56.029896], {category: 'shop'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/shop2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        shop7 = new ymaps.Placemark([58.034659, 56.024409], {category: 'shop'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/shop2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        shop8 = new ymaps.Placemark([58.039590, 56.027315], {category: 'shop'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/shop2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        shop9 = new ymaps.Placemark([58.034636, 56.030551], {category: 'shop'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/shop2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        shop10 = new ymaps.Placemark([58.034662, 56.031614], {category: 'shop'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/shop2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        shop11 = new ymaps.Placemark([58.034653, 56.032624], {category: 'shop'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/shop2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        shop12 = new ymaps.Placemark([58.034677, 56.033664], {category: 'shop'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/shop2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        shop13 = new ymaps.Placemark([58.034604, 56.036577], {category: 'shop'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/shop2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        shop14 = new ymaps.Placemark([58.036198, 56.035630], {category: 'shop'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/shop2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        shop15 = new ymaps.Placemark([58.036826, 56.034624], {category: 'shop'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/shop2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        stadium = new ymaps.Placemark([58.039882, 56.034070], {category: 'stadium'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/stadium2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        saloon1 = new ymaps.Placemark([58.039287, 56.027594], {category: 'saloon'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/barber2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        saloon2 = new ymaps.Placemark([58.039287, 56.027594], {category: 'saloon'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/barber2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        saloon3 = new ymaps.Placemark([58.033363, 56.020714], {category: 'saloon'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/barber2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        saloon4 = new ymaps.Placemark([58.034684, 56.029507], {category: 'saloon'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/barber2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        saloon5 = new ymaps.Placemark([58.032692, 56.028813], {category: 'saloon'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/barber2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        saloon6 = new ymaps.Placemark([58.034085, 56.032750], {category: 'saloon'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/barber2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        saloon7 = new ymaps.Placemark([58.034163, 56.034133], {category: 'saloon'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/barber2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        saloon8 = new ymaps.Placemark([58.035683, 56.036193], {category: 'saloon'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/barber2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        saloon9 = new ymaps.Placemark([58.036733, 56.034946], {category: 'saloon'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/barber2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        coffee1 = new ymaps.Placemark([58.039651, 56.027246], {category: 'coffee'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/cafe2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        coffee2 = new ymaps.Placemark([58.039681, 56.026263], {category: 'coffee'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/cafe2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        coffee3 = new ymaps.Placemark([58.034159, 56.021893], {category: 'coffee'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/cafe2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        coffee4 = new ymaps.Placemark([58.034641, 56.025579], {category: 'coffee'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/cafe2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        coffee5 = new ymaps.Placemark([58.035288, 56.025701], {category: 'coffee'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/cafe2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        coffee6 = new ymaps.Placemark([58.036063, 56.038523], {category: 'coffee'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/cafe2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        bank1 = new ymaps.Placemark([58.039269, 56.025066], {category: 'banks'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/card2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        bank2 = new ymaps.Placemark([58.037904, 56.032292], {category: 'banks'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/card2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        bank3 = new ymaps.Placemark([58.036875, 56.034821], {category: 'banks'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/card2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        bank4 = new ymaps.Placemark([58.034707, 56.028667], {category: 'banks'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/card2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        bank5 = new ymaps.Placemark([58.034647, 56.036881], {category: 'banks'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/card2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        bank6 = new ymaps.Placemark([58.034667, 56.024451], {category: 'banks'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/card2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        bank7 = new ymaps.Placemark([58.032691, 56.028875], {category: 'banks'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/card2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        bank8 = new ymaps.Placemark([58.034687, 56.030212], {category: 'banks'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/card2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        bus1 = new ymaps.Placemark([58.039048, 56.025877], {category: 'bus'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/bus2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        bus2 = new ymaps.Placemark([58.038888, 56.027541], {category: 'bus'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/bus2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        bus3 = new ymaps.Placemark([58.039131, 56.030283], {category: 'bus'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/bus2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        bus4 = new ymaps.Placemark([58.038963, 56.033022], {category: 'bus'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/bus2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        baby1 = new ymaps.Placemark([58.039554, 56.030242], {category: 'baby'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/baby2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        baby2 = new ymaps.Placemark([58.038135, 56.024039], {category: 'baby'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/baby2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        baby3 = new ymaps.Placemark([58.033464, 56.032918], {category: 'baby'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/baby2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        school1 = new ymaps.Placemark([58.038563, 56.040285], {category: 'school'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/school2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        school2 = new ymaps.Placemark([58.038683, 56.035456], {category: 'school'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/school2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        school3 = new ymaps.Placemark([58.037200, 56.036230], {category: 'school'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/school2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        school4 = new ymaps.Placemark([58.035368, 56.035608], {category: 'school'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/school2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        school5 = new ymaps.Placemark([58.033444, 56.035229], {category: 'school'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/school2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        school6 = new ymaps.Placemark([58.035640, 56.032475], {category: 'school'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/school2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        school7 = new ymaps.Placemark([58.035003, 56.027563], {category: 'school'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/school2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        school8 = new ymaps.Placemark([58.035283, 56.023799], {category: 'school'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/school2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        school9 = new ymaps.Placemark([58.036737, 56.024646], {category: 'school'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/school2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        ambulance1 = new ymaps.Placemark([58.037506, 56.023601], {category: 'ambulance'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/ambulance2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        ambulance2 = new ymaps.Placemark([58.039426, 56.025685], {category: 'ambulance'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/ambulance2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        ambulance3 = new ymaps.Placemark([58.035861, 56.024696], {category: 'ambulance'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/ambulance2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        ambulance4 = new ymaps.Placemark([58.037976, 56.031916], {category: 'ambulance'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/ambulance2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        ambulance5 = new ymaps.Placemark([58.038167, 56.034725], {category: 'ambulance'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/ambulance2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        ambulance6 = new ymaps.Placemark([58.036905, 56.034821], {category: 'ambulance'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/ambulance2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        ambulance7 = new ymaps.Placemark([58.034657, 56.032314], {category: 'ambulance'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/ambulance2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
+        ambulance8 = new ymaps.Placemark([58.034626, 56.035102], {category: 'ambulance'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/ambulance2.svg', iconImageSize: [38, 38], iconImageOffset: [-16, -16], });
         stepa = new ymaps.Placemark([58.038414, 56.038119], {category: 'stepa'}, { iconLayout: 'default#imageWithContent', iconImageHref: 'img/stepa.svg', iconImageSize: [101, 50], iconImageOffset: [-50, -50], });
 
     myMap.geoObjects
@@ -483,13 +483,18 @@ $('body').on('click', '[data-tab="mortgage"]', () => {
 
 $('.modal').hide();
 
-$('body').on('click', 'a[data-modal]', (e) => {
+$('body').on('click', 'a[data-modal], div[data-modal]:not(.modal)', (e) => {
     $('.modal').removeClass('active');
     $('.modals').addClass('active');
     $('.modal[data-modal="' + $(e.currentTarget).attr('data-modal') + '"]').addClass('active');
 });
 
-$('body').on('click', '.modal__close', (e) => {
+$('body').on('click', '.modal__close', () => {
+    $('.modals').removeClass('active');
+    $('.modal').removeClass('active');
+});
+
+$('body').on('click', '.modal[data-modal="success"] .btn', () => {
     $('.modals').removeClass('active');
     $('.modal').removeClass('active');
 });
@@ -502,6 +507,7 @@ $('body').on('click', '.modals', (e) => {
 });
 
 $(window).on('load', () => {
+    $('.ways__body').height($('.ways__body').height() + 40);
     $('.loader').animate({ opacity: 0 }, 500, () => { $('.loader').remove() })
     $('html').removeClass('loading');
 });
@@ -513,9 +519,44 @@ $('body').on('submit', 'form', (e) => {
         url: "../form.php",
         data: $(e.currentTarget).serialize(),
         success: () => {
-            $(e.currentTarget).find('.form-group').fadeOut();
-            $(e.currentTarget).find('input').fadeOut();
-            $(e.currentTarget).find('.btn').text('Заявка отправлена').css('background', '#ff6c00');
+            $('.modal').removeClass('active');
+            $('.modal[data-modal="success"]').addClass('active');
         }					
     });
+});
+
+$("a[data-scroll]").click((e) => {
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $('section[data-scroll="' + $(e.currentTarget).attr('data-scroll') + '"]').offset().top
+    }, 2000);
+});
+
+$(window).on('scroll', () => {
+    if ($(window).scrollTop() >= $('.f2').offset().top) {
+        $('.scrolltop').fadeIn();
+    } else {
+        $('.scrolltop').fadeOut();
+    }
+});
+
+$('body').on('click', '.scrolltop', () => {
+    $('html, body').animate({scrollTop:0}, 'slow');
+});
+
+$('body').on('click', '.design nav a', (e) => {
+    $('.design .swiper-container').removeClass('active');
+    $('.design nav a').removeClass('active');
+    $(e.currentTarget).addClass('active');
+    $(`.design .swiper-container[data-slider="${$(e.currentTarget).attr('data-slider')}"]`).addClass('active');
+});
+
+
+$('body').on('click', '.press__arrow:not(.active)', (e) => {
+    $(e.currentTarget).toggleClass('active').html('<img src="img/left-arrow.svg" alt=""><span>Вернуться к списку</span>').css('margin-left', '-20px');
+    $(e.currentTarget).parent().find('.press__full').slideToggle(300);
+});
+
+$('body').on('click', '.press__arrow.active', (e) => {
+    $(e.currentTarget).toggleClass('active').html('<span>Читать далее</span> <img src="img/right-arrow.svg" alt="">').css('margin-left', '0');
+    $(e.currentTarget).parent().find('.press__full').slideToggle(300);
 });

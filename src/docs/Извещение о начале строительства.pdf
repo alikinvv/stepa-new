@@ -1,3 +1,0 @@
-<br />
-<b>Warning</b>:  ftp_get() [<a href='function.ftp-get'>function.ftp-get</a>]: Failed to open file. in <b>/storage/libs/HTS/library/HTS/VFS/Ftp.php</b> on line <b>61</b><br />
-Unable to open VFS file "/xn-----7kcoade3drgum9nb.xn--p1ai/docs/Извещение о начале строительства.pdf".

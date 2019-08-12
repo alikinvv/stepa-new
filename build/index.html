@@ -36,6 +36,10 @@
     <img src="img/loader.svg" width="400" alt="">
 </div>
 
+<div class="scrolltop" style="display: none">
+    <img src="img/up.svg" width="50" alt="">
+</div>
+
 <header class="header">
     <div class="container">
         <div class="flex">
@@ -53,8 +57,8 @@
             </a>
         </div>
         <nav class="header__menu">
-            <a href="#view" data-scroll="view">Вид из окон</a>
-            <a href="#stream" data-scroll="company">Трансляция со стройки</a>
+            <a href="javascript:void(0)" data-scroll="view">Вид из окон</a>
+            <a href="javascript:void(0)" data-scroll="steps">Ход строительства</a>
         </nav>
         <a href="tel:+73422999888" class="header__phone">+7 (342) <span>2-999-888</span></a>
         <a href="javascript:void(0)" data-modal="more" class="btn btn-white">Заказать звонок</a>
@@ -65,20 +69,18 @@
     <div class="container">
         <div>
             <nav>
-                <a href="javascript:void(0)" data-scroll="apartments">Выбор квартиры</a>
-                <a href="javascript:void(0)" data-scroll="features">Безопасная среда</a>
-                <a href="javascript:void(0)" data-scroll="dreams">О микрорайоне</a>
-                <a href="javascript:void(0)" data-scroll="secure">Эскроу-счета</a>
-                <a href="javascript:void(0)" data-scroll="rooms">Отделка</a>
-                <a href="javascript:void(0)" data-scroll="apartments">Планировки</a>
+                <a href="javascript:void(0)" data-scroll="main">Выбор квартиры</a>
+                <a href="javascript:void(0)" data-scroll="features">О доме</a>
+                <a href="javascript:void(0)" data-scroll="map-wrap">Инфраструктура</a>
+                <a href="javascript:void(0)" data-scroll="apartments">Квартиры</a>
+                <a href="javascript:void(0)" data-scroll="variants">Отделка</a>
+                <a href="javascript:void(0)" data-scroll="ways">Способ покупки</a>
                 <a href="javascript:void(0)" data-scroll="view">Вид из окон</a>
-                <a href="javascript:void(0)" data-scroll="map">Расположение</a>
-                <a href="javascript:void(0)" data-scroll="inside">О доме</a>
-                <a href="javascript:void(0)" data-scroll="ways">Способы приобретения</a>
                 <a href="javascript:void(0)" data-scroll="company">О застройщике</a>
-                <a href="javascript:void(0)" data-scroll="company">Ход строительства</a>
-                <a href="javascript:void(0)" data-scroll="company">Онлайн-трансляция</a>
-                <a href="javascript:void(0)" data-scroll="footer">Контакты</a>
+                <a href="javascript:void(0)" data-scroll="company">Документация</a>
+                <a href="javascript:void(0)" data-scroll="steps">Ход строительства</a>
+                <a href="javascript:void(0)" data-scroll="contacts">Контакты</a>
+                <a href="javascript:void(0)" data-scroll="footer">Пресс-центр</a>
             </nav>
         </div>
         <div>
@@ -92,13 +94,12 @@
     </div>
 </div>
 
-<section class="main">
+<section class="main" data-scroll="main">
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide" style="background-image: url('img/main2.jpg')">
                 <div class="container">
                     <div class="main__info">
-                        <a href="javascript:void(0)" class="btn btn-yellow">Счета Эскроу</a>
                         <h2>Знал в районе весь народ, на Буксирной, 10 <br>
                             «ДЯДЯ СТЁПА» дом  растёт!</h2>
 
@@ -109,7 +110,6 @@
             <div class="swiper-slide" style="background-image: url('img/main1.jpg')">
                 <div class="container">
                     <div class="main__info">
-                        <a href="javascript:void(0)" class="btn btn-yellow">Счета Эскроу</a>
                         <h2>Узнавали «Дядю Стёпу» за такую высоту, <br>
                             Каму видно за версту!</h2>
 
@@ -120,7 +120,6 @@
             <div class="swiper-slide" style="background-image: url('img/main3.jpg')">
                 <div class="container">
                     <div class="main__info">
-                        <a href="javascript:void(0)" class="btn btn-yellow">Счета Эскроу</a>
                         <h2>Это просто загляденье — <br>
                             Чудо-двор у «ДЯДИ СТЁПЫ»!</h2>
 
@@ -130,31 +129,33 @@
             </div>
         </div>
     </div>
+    <div class="main-next swiper-button-next"></div>
+    <div class="main-prev swiper-button-prev"></div>
 </section>
 
-<section class="comfort">
+<section class="comfort" data-scroll="comfort">
     <div class="container">
         <p class="start">Старт продаж</p>
         <img src="img/comfort.svg" width="439" alt="">
         <a href="javascript:void(0)" data-modal="price" class="btn btn-blue">Получить прайс</a>
     </div>
-    <img src="img/stepa.png" alt="" class="stepa">
+    <img src="img/stepa.png" alt="" width="420" class="stepa">
 </section>
 
 <section class="submenu">
     <div class="container">
         <nav>
-            <a href="javascript:void(0)">о доме</a>
-            <a href="javascript:void(0)">инфраструктура</a>
-            <a href="javascript:void(0)">квартиры</a>
-            <a href="javascript:void(0)">отделка</a>
-            <a href="javascript:void(0)">способы покупки</a>
-            <a href="javascript:void(0)">о застройщике</a>
+            <a href="javascript:void(0)" data-scroll="features">о доме</a>
+            <a href="javascript:void(0)" data-scroll="map-wrap">инфраструктура</a>
+            <a href="javascript:void(0)" data-scroll="apartments">квартиры</a>
+            <a href="javascript:void(0)" data-scroll="variants">отделка</a>
+            <a href="javascript:void(0)" data-scroll="company">способы покупки</a>
+            <a href="javascript:void(0)" data-scroll="company">о застройщике</a>
         </nav>
     </div>
 </section>
 
-<section class="features f1">
+<section class="features f1" data-scroll="features">
     <div class="container">
         <h2>Современный проект <br> <span>двор без машин</span></h2>
     </div>
@@ -181,12 +182,7 @@
                     пользования</span>
             </div>
             <div class="icons__item">
-                <div class="icons__icon"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-bicycle-parked"></use></svg></div>
-                <span>велопарковка <br>
-                    рядом с подъездом</span>
-            </div>
-            <div class="icons__item">
-                <div class="icons__icon"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-pergola2"></use></svg></div>
+                <div class="icons__icon"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-pergola"></use></svg></div>
                 <span>беседки и скамейки <br>
                     в озеленённой части <br>
                     территории</span>
@@ -201,10 +197,13 @@
         <div class="images">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide" style="background-image: url('img/p2.jpg')"></div>
-                    <div class="swiper-slide" style="background-image: url('img/p1.jpg')"></div>
-                    <div class="swiper-slide" style="background-image: url('img/p3.jpg')"></div>
-                    <div class="swiper-slide" style="background-image: url('img/p4.jpg')"></div>
+                    <div class="swiper-slide" style="background-image: url('img/s1.jpg')"></div>
+                    <div class="swiper-slide" style="background-image: url('img/s2.jpg')"></div>
+                    <div class="swiper-slide" style="background-image: url('img/s3.jpg')"></div>
+                    <div class="swiper-slide" style="background-image: url('img/s4.jpg')"></div>
+                    <div class="swiper-slide" style="background-image: url('img/s5.jpg')"></div>
+                    <div class="swiper-slide" style="background-image: url('img/s6.jpg')"></div>
+                    <div class="swiper-slide" style="background-image: url('img/s7.jpg')"></div>
                 </div>
             </div>
             <div class="f1-next swiper-button-next"></div>
@@ -213,7 +212,7 @@
     </div>
 </section>
 
-<section class="features f2 features-gray">
+<section class="features f2 features-gray" data-scroll="features2">
     <div class="container">
         <h2>для комфортной жизни</h2>
     </div>
@@ -223,11 +222,11 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide" style="background-image: url('img/k4.jpg')"></div>
                     <div class="swiper-slide" style="background-image: url('img/k6.jpg')"></div>
-                    <div class="swiper-slide" style="background-image: url('img/k1.jpg')"></div>
-                    <div class="swiper-slide" style="background-image: url('img/k2.jpg')"></div>
                     <div class="swiper-slide" style="background-image: url('img/k3.jpg')"></div>
                     <div class="swiper-slide" style="background-image: url('img/k5.jpg')"></div>
                     <div class="swiper-slide" style="background-image: url('img/k7.jpg')"></div>
+                    <div class="swiper-slide" style="background-image: url('img/k1.jpg')"></div>
+                    <div class="swiper-slide" style="background-image: url('img/k2.jpg')"></div>
                 </div>
             </div>
             <div class="f2-next swiper-button-next"></div>
@@ -261,7 +260,7 @@
                         </span>
             </div>
             <div class="icons__item">
-                <div class="icons__icon"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-width3"></use></svg></div>
+                <div class="icons__icon"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-width"></use></svg></div>
                 <span>увеличенная ширина <br>
                         общего коридора</span>
             </div>
@@ -276,7 +275,7 @@
     </div>
 </section>
 
-<section class="four">
+<section class="four" data-scroll="four">
     <div class="container">
         <h2>выгодные решения</h2>
         
@@ -293,13 +292,13 @@
                     в каждой квартире</span></div>
             <div class="item"><img src="img/r4.jpg" alt=""><span><strong>Фасад из керамогранита</strong> <br>
                     отсутствие экспуатационных  <br>
-                    затрат до 50 лет и презентабильный  <br>
+                    затрат до 50 лет и презентабельный  <br>
                     внешний вид</span></div>
         </div>
     </div>
 </section>
 
-<section class="map-wrap">
+<section class="map-wrap" data-scroll="map-wrap">
     <div class="container">
         <h2>Удобно, когда всё близко! <br> <span>«Дядя Стёпа» — дом, где рядом всё необходимое <br>
                 для комфортной жизни счастливой семьи!</span></h2>
@@ -307,15 +306,15 @@
         <div class="flex">
             <nav class="navigation">
                 <a class="all active" href="javascript:void(0)"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-star"></use></svg> <span>Все объекты</span></a>
-                <a class="shop" href="javascript:void(0)"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-shop2"></use></svg> <span>Магазины и ТЦ</span></a>
-                <a class="school" href="javascript:void(0)"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-scholl2"></use></svg> <span>Детские сады и школы</span></a>
-                <a class="baby" href="javascript:void(0)"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-develop2"></use></svg> <span>Развивающие центры</span></a>
-                <a class="bus" href="javascript:void(0)"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-bus2"></use></svg> <span>Остановки транспорта</span></a>
-                <a class="ambulance" href="javascript:void(0)"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-medical2"></use></svg> <span>Аптеки и клиники</span></a>
-                <a class="banks" href="javascript:void(0)"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-card2"></use></svg> <span>Банки и банкоматы</span></a>
-                <a class="coffee" href="javascript:void(0)"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-cafe2"></use></svg> <span>Кафе и рестораны</span></a>
-                <a class="saloon" href="javascript:void(0)"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-barber2"></use></svg> <span>Салоны красоты</span></a>
-                <a class="stadium" href="javascript:void(0)"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-stadium2"></use></svg> <span>Стадион</span></a>
+                <a class="shop" href="javascript:void(0)"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-shop"></use></svg> <span>Магазины и ТЦ</span></a>
+                <a class="school" href="javascript:void(0)"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-scholl"></use></svg> <span>Детские сады и школы</span></a>
+                <a class="baby" href="javascript:void(0)"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-develop"></use></svg> <span>Развивающие центры</span></a>
+                <a class="bus" href="javascript:void(0)"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-bus"></use></svg> <span>Остановки транспорта</span></a>
+                <a class="ambulance" href="javascript:void(0)"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-medical"></use></svg> <span>Аптеки и клиники</span></a>
+                <a class="banks" href="javascript:void(0)"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-card"></use></svg> <span>Банки и банкоматы</span></a>
+                <a class="coffee" href="javascript:void(0)"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-cafe"></use></svg> <span>Кафе и рестораны</span></a>
+                <a class="saloon" href="javascript:void(0)"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-barber"></use></svg> <span>Салоны красоты</span></a>
+                <a class="stadium" href="javascript:void(0)"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-stadium"></use></svg> <span>Стадион</span></a>
             </nav>
             <div class="map" id="map">
 
@@ -324,14 +323,14 @@
     </div>
 </section>
 
-<section class="four f2">
+<section class="four f2" data-scroll="four">
     <div class="container">
         <h2>расположен для жизни</h2>
         
         <div class="flex">
             <div class="item"><img src="img/ra1.jpg" alt=""><span><strong>Зелёный район</strong> <br>
                     Проживание в экологически чистом районе, <br>
-                    доступная набережная реки Камы и лес - подарят <br>
+                    доступная набережная реки Камы и лес подарят <br>
                     вам счастье и умиротворение.<br><br>
                     
                     Микрорайон «Водники» - это лучшее место для <br>
@@ -364,19 +363,19 @@
                         <p class="apartments__title">1-комнатные <br>
                                 <span>от 34,52 до 36,32 м2</span></p>
                         <img src="img/1.svg" alt="" class="apartments__img">
-                        <a href="javascript:void(0)" class="apartments__btn btn btn-blue"data-modal="apartments1">Узнать подробнее</a>
+                        <a href="javascript:void(0)" class="apartments__btn btn btn-blue" data-modal="apartments1">Узнать подробнее</a>
                     </div>
                     <div class="apartments__item">
                         <p class="apartments__title">2-комнатные <br>
                                 <span>от 48,69 до 50,54 м2</span></p>
                         <img src="img/2.svg" alt="" class="apartments__img">
-                        <a href="javascript:void(0)" class="apartments__btn btn btn-blue"data-modal="apartments2">Узнать подробнее</a>
+                        <a href="javascript:void(0)" class="apartments__btn btn btn-blue" data-modal="apartments2">Узнать подробнее</a>
                     </div>
                     <div class="apartments__item">
                         <p class="apartments__title">3-комнатные <br>
                                 <span>от 59,12 до 60,32 м2</span></p>
                         <img src="img/3.svg" alt="" class="apartments__img">
-                        <a href="javascript:void(0)" class="apartments__btn btn btn-blue"data-modal="apartments3">Узнать подробнее</a>
+                        <a href="javascript:void(0)" class="apartments__btn btn btn-blue" data-modal="apartments3">Узнать подробнее</a>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -384,19 +383,26 @@
                         <p class="apartments__title">студия<br>
                             <span>от 20,75 до 25,40 м2</span></p>
                         <img src="img/4.svg" alt="" class="apartments__img">
-                        <a href="javascript:void(0)" class="apartments__btn btn btn-blue"data-modal="apartmentss">Узнать подробнее</a>
+                        <a href="javascript:void(0)" class="apartments__btn btn btn-blue" data-modal="apartmentss">Узнать подробнее</a>
                     </div>
                     <div class="apartments__item">
                         <p class="apartments__title">евродвушка<br>
                                 <span>от 39,59 до 40,55 м2</span></p>
                         <img src="img/5.svg" alt="" class="apartments__img">
-                        <a href="javascript:void(0)" class="apartments__btn btn btn-blue"data-modal="apartmentse2">Узнать подробнее</a>
+                        <a href="javascript:void(0)" class="apartments__btn btn btn-blue" data-modal="apartmentse2">Узнать подробнее</a>
                     </div>
                     <div class="apartments__item">
                         <p class="apartments__title">евротрёшка<br>
                                 <span>от 53,40 до 54,45 м2</span></p>
                         <img src="img/6.svg" alt="" class="apartments__img">
-                        <a href="javascript:void(0)" class="apartments__btn btn btn-blue"data-modal="apartmentse3">Узнать подробнее</a>
+                        <a href="javascript:void(0)" class="apartments__btn btn btn-blue" data-modal="apartmentse3">Узнать подробнее</a>
+                    </div>
+                </div>
+                <div class="swiper-slide full">
+                    <div class="apartments__item">
+                        <p class="apartments__title"><span>Кладовые от 2,83 до 5,67 м2</span></p>
+                        <img src="img/pantry.png" alt="" class="apartments__img">
+                        <a href="javascript:void(0)" class="apartments__btn btn btn-blue" data-modal="pantry">Выбрать кладовую</a>
                     </div>
                 </div>
             </div>
@@ -423,35 +429,43 @@
     </div>
 </section>
 
-<section class="design">
+<section class="design" data-scroll="design">
     <div class="container">
         <h2>дизайнерские решения типовых квартир <br> <span>застройщик в сотрудничестве с известным пермским дизайнером Ангелиной Леонтьевой <br>
                 (компания LUXE HOUSE) разработали для вас варианты отделки типовых квартир</span></h2>
 
         <nav>
-            <a href="javascript:void(0)">Студия</a>
-            <a class="active" href="javascript:void(0)">1-комнатная</a>
-            <a href="javascript:void(0)">Евродвушка</a>
+            <a href="javascript:void(0)" data-slider="1">Студия</a>
+            <a class="active" href="javascript:void(0)" data-slider="2">1-комнатная</a>
+            <a href="javascript:void(0)" data-slider="3">Евродвушка</a>
         </nav>
+
         <div class="sliders">
-            <div class="swiper-container">
+            <div class="swiper-container" data-slider="1">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide" style="background-image: url('img/1n.jpg')"></div>
-                    <div class="swiper-slide" style="background-image: url('img/1n.jpg')"></div>
+                    <div class="swiper-slide" style="background-image: url('img/studio.jpg')"></div>
                 </div>
             </div>
-            <div class="design-next swiper-button-next"></div>
-            <div class="design-prev swiper-button-prev"></div>
+            <div class="swiper-container active" data-slider="2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image: url('img/type.jpg')"></div>
+                </div>
+            </div>
+            <div class="swiper-container" data-slider="3">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image: url('img/two.jpg')"></div>
+                </div>
+            </div>
         </div>
     
         <div class="flex">
-            <div>
-                <svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-house-plans"></use></svg>
+            <div data-modal="design" style="cursor: pointer">
+                <svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-interior-design"></use></svg>
                 <span>Заказать индивидуальный <br>
                         дизайн-проект</span>
             </div>
             <div>
-                <svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-download-1"></use></svg>
+                <svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-download"></use></svg>
                 <span>Скачать типовой дизайн-проект <br>
                         1-комнатной квартиры</span>
             </div>
@@ -459,7 +473,7 @@
     </div>
 </section>
 
-<section class="features f3 features-gray">
+<section class="features f3 features-gray" data-scroll="features3">
     <div class="container">
         <h2>идеальный микроклимат в квартире</h2>
     </div>
@@ -482,24 +496,24 @@
                         в межэтажных перекрытиях</span>
             </div>
             <div class="icons__item">
-                <div class="icons__icon"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-heating2"></use></svg></div>
+                <div class="icons__icon"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-heating"></use></svg></div>
                 <span><strong>Лучевая система отопления</strong> <br>
-                        радиаторы Prado с регулятором дают возможность задавать <br>
+                        радиаторы Prado с регулятором дают возможность задавать
                         необходимую температуру в квартире</span>
             </div>
             <div class="icons__item">
-                <div class="icons__icon"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-sun-1"></use></svg></div>
+                <div class="icons__icon"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-sun"></use></svg></div>
                 <span><strong>витражное остекление балконных проёмов</strong> <br>
                         превосходная инсоляция в любое время года</span>
             </div>
             <div class="icons__item">
-                <div class="icons__icon"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-wardrobe3"></use></svg></div>
+                <div class="icons__icon"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-wardrobe"></use></svg></div>
                 <span><strong>гардеробная или место под шкаф-купе</strong> <br>
                         предусмотрены планировочными решениями в каждой  <br>
                         квартире</span>
             </div>
             <div class="icons__item">
-                <div class="icons__icon"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-washing-machine2"></use></svg></div>
+                <div class="icons__icon"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-washing-machine"></use></svg></div>
                 <span><strong>Место для стиральной машины</strong> <br>
                         разводка коммуникаций, слив и розетка для подключения</span>
             </div>
@@ -519,25 +533,25 @@
     </div>
 </section>
 
-<section class="variants">
+<section class="variants" data-scroll="variants">
     <div class="container">
         <h2>варианты отделки</h2>
         <div class="item">
             <div class="info">
                 <p><strong><span>ПРЕДЧИСТОВАЯ —</span> <br> Квартира полностью готова к финишной отделке. <br>
                      Профессионально выполненные сложные черновые <br>
-                      работы, позволят сосредоточится на планировании <br>
+                      работы, позволят сосредоточиться на планировании <br>
                        интерьера и дизайне. Вам предоставляется <br>
                         возможность сделать ремонт под себя, выбирая <br>
                          материалы и цветовые решения на своё усмотрение.</strong></p>
                 <p>ОСНОВНЫЕ ОСОБЕННОСТИ ОТДЕЛКИ:</p>
                 <ul>
-                    <li>стены ошпатлёваны, подготовлены под поклейку <br> обоями, на полу стяжка</li>
+                    <li>стены ошпатлёваны, подготовлены под поклейку <br> обоев, на полу стяжка</li>
                     <li>качественная металлическая входная дверь с двумя  <br> замками</li>
                     <li>полная разводка электроснабжения, водоснабжения  <br> и водоотведения</li>
                     <li>установлены радиаторы, счётчики, домофон, унитаз  <br> и проведён интернет</li>
                 </ul>
-                <a href="javascript:void(0)">Полное описание параметров отделки</a>
+                <a href="docs/otdelka.pdf" target="_blank">Полное описание параметров отделки</a>
             </div>
             <div class="slider s1">
                 <div class="swiper-container">
@@ -553,20 +567,20 @@
             <div class="info">
                 <p><strong><span>ОНИКС СТАНДАРТ —</span> <br> Квартира с отделкой по дизайн-проекту готова к <br>
                      проживанию сразу после сдачи дома. <br>
-                      Квалифицированные строители, используя <br>
-                       качественные отделочные материалы сэкономят Вам <br>
+                      Квалифицированные строители, <br>
+                       качественные отделочные материалы. Вы сэкономите <br>
                         время, силы и деньги на ремонт квартиры. Вам <br>
                          останется только завезти мебель с личными вещами <br>
                           и отпраздновать новоселье.
                 </strong></p>
                 <p>ОСНОВНЫЕ ОСОБЕННОСТИ ОТДЕЛКИ:</p>
                 <ul>
-                    <li>установлен натяжной потолок, наклеены обои,  <br> уложен линолеум</li>
-                    <li>установлены межкомнатные двери, покрытые  <br> искусственным шпоном</li>
+                    <li>установлен натяжной потолок, наклеены обои, <br> линолеум</li>
+                    <li>установлены межкомнатные двери <br> (искуственный шпон)</li>
                     <li>частичная отделка плиткой по периметру ванной и  <br> покраска</li>
                     <li>установлена ванна, сантехника, смесители и  <br> полотенцесушитель</li>
                 </ul>
-                <a href="javascript:void(0)">Полное описание параметров отделки</a>
+                <a href="docs/otdelka.pdf" target="_blank">Полное описание параметров отделки</a>
             </div>
             <div class="slider s2">
                 <div class="swiper-container">
@@ -582,19 +596,19 @@
             <div class="info">
                 <p><strong><span>КОМФОРТ —</span> <br> Чистовая отделка Комфорт-класса производится по <br>
                      специально разработанному дизайн-проекту, а <br>
-                      материалы, используемы при ремонте, отличаются <br>
-                       высокими каче-ственными и эстетическими <br>
-                        характеристиками. Вам достаточно просто <br>
-                         расставить мебель — все остальное мы уже сделали <br>
-                          за вас!</strong></p>
+                      материалы, используемые при ремонте, отличаются <br>
+                       высокими качественными и эстетическими <br>
+                        характеристиками. Вам остаётся только <br>
+                         завезти мебель с личными вещами и <br>
+                          отпраздновать новоселье.</strong></p>
                 <p>ОСНОВНЫЕ ОСОБЕННОСТИ ОТДЕЛКИ:</p>
                 <ul>
-                    <li>обои под покраску с возможностью выбора цвета, <br> уложен ламинат</li>
-                    <li>установлены полнотелые межкомнатные двери, <br> покрытые экошпоном</li>
+                    <li>обои под покраску с возможностью выбора цвета, <br> ламинат</li>
+                    <li>установлены полнотелые межкомнатные двери <br> (экошпон)</li>
                     <li>использование материалов, сантехники, плитки <br> более высокого ценового сегмента</li>
-                    <li>коммуникации скрыты, у ванной установлен экран</li>
+                    <li>коммуникации скрыты, в ванной установлен экран</li>
                 </ul>
-                <a href="javascript:void(0)">Полное описание параметров отделки</a>
+                <a href="docs/otdelka.pdf" target="_blank">Полное описание параметров отделки</a>
             </div>
             <div class="slider s3">
                 <div class="swiper-container">
@@ -606,7 +620,7 @@
                 <div class="s3-prev swiper-button-prev"></div> -->
             </div>
         </div>
-        <p class="desc">*Представлен возможный вариант дизайна интерьера квартиры. Мебель, посуда, светильники и предметы интерьера не входят в стоимость отделки. Элементы отделки (покрытие стен, пола, потолка, двери, фурнитура и др.) могут быть изменены Застройщиком до передачи квартиры, исходя из актуального ассортимента производителя. При этом цена договора и указанные в нем технические характеристики отделочных материалов не для покупателя не  меняются.</p>
+        <p class="desc">*Представлен возможный вариант дизайна интерьера квартиры. Мебель, посуда, светильники и предметы интерьера не входят в стоимость отделки. Элементы отделки (покрытие стен, пола, потолка, двери, фурнитура и др.) могут быть изменены Застройщиком до передачи квартиры, исходя из актуального ассортимента производителя. При этом цена договора и указанные в нем технические характеристики отделочных материалов для покупателя не меняются.</p>
     </div>
 </section>
 
@@ -622,16 +636,19 @@
         <div class="ways__body">
             <div class="active ways__tab" data-tab="mortgage">
                 <p class="ways__title">выгодные условия ипотеки!</p>
-                <p>Максимально выгодные условия от ведущих банков - ставка от 9,7%; <br>
-                     первоначальный взнос от 10%. <br><br>
+                <p>Максимально выгодные условия от ведущих банков-партнёров: ставка от 5%; <br>
+                        первоначальный взнос от 10%. <br><br>
+                        
                         Бронируем квартиру под вас до получения одобрения. <br><br>
-                        Юридическое сопровождение на всех этапах сделки сделает покупку легкой и комфортной.</p>
+                        
+                        <strong>Юридическое сопровождение на всех этапах сделки сделает покупку легкой и комфортной!</strong></p>
                 <div class="ways__banks">
-                    <div class="ways__bank"><img src="img/vtb.png" alt=""><span>ставка от 9,7%</span></div>
-                    <div class="ways__bank"><img src="img/bank.png" alt=""><span>ставка от 9,99%</span></div>
+                    <div class="ways__bank"><div><img src="img/sberbank.png" width="157" alt=""></div><span>ставка от 9,5%</span></div>
+                    <div class="ways__bank"><div><img src="img/vtb.png" width="108" alt=""></div><span>ставка от 5%</span></div>
+                    <div class="ways__bank"><div><img src="img/absolutbank.png" width="185" alt=""></div><span>ставка от 10,7%</span></div>
+                    <div class="ways__bank"><div><img src="img/metallinvest.png" width="103" alt=""></div><span>ставка от 5,5%</span></div>
                 </div>
-                <p><strong>Рассчитать и подобрать выгодный для вас ипотечный кредит <br>
-                        помогут наши специалисты.</strong></p>
+                <p><strong>Рассчитать и подобрать выгодный для вас ипотечный кредит помогут наши специалисты</strong></p>
             </div>
             <div class="ways__tab" data-tab="installment">
                 <p class="ways__title">рассрочка 0%!</p>
@@ -662,7 +679,7 @@
     <img src="img/family.svg" alt="" class="ways__family">
 </section>
 
-<section class="icons">
+<section class="icons" data-scroll="icons">
     <div class="container">
         <h3>Мы используем НОВЫЙ БЕЗОПАСНЫЙ инструмент расчетов по ДДУ — <br>
             <span>СЧЕТА ЭСКРОУ</span></h3>
@@ -672,11 +689,11 @@
                         СЧЕТАХ ЭСКРОУ <br>
                         застрахованы АСВ <br>
                         в размере до 10 млн. руб.</span></div>
-                <div class="item"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-pay2"></use></svg><span>Денежные средства <br>
+                <div class="item"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-pay"></use></svg><span>Денежные средства <br>
                         перечисляются застройщику <br>
                         после ввода дома <br>
                         в эксплуатацию</span></div>
-                <div class="item"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-0%"></use></svg><span>Банк НЕ ВЗЫМАЕТ <br>
+                <div class="item"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-untitled"></use></svg><span>Банк НЕ ВЗЫМАЕТ <br>
                         вознаграждение <br>
                         с покупателя за открытие <br>
                         и сопровождение счета</span></div>
@@ -737,9 +754,7 @@
             <img src="img/onix.svg" width="219" alt="">
             <div>
                 <p><strong>Новые стандарты качества в строительстве от группы компаний «Оникс»</strong> <br> <br>
-                    Группа компаний Оникс профессионал на рынке строительства Перми. За плечами годы успешного опыта в сфере коммерческой недвижимости. Строительным подразделением группы, начиная с 2011 года, успешно реализовано более 10-ти  проектов зданий различного назначения, в том числе под обязательным Государственным строительным  надзором, среди объектов: 
-                    ТЦ «Браво» (ул. Светлогорская,20), ТЦ «Краснов» (ул. Солдатова, 35), Автосалон «KIA» (ул. Спешилова, 75), офисное здание по ул. Островского, 44а, и т.д. Это примеры реализации проектов, где воплотился целостный подход к строительству, в котором сочетаются и продуманная архитектура, грамотная организация общественного пространства и благоустройство среды . Объекты, которые показывают, что группа компаний Оникс – успешный застройщик, постоянно улучшающий  стандарты работы, свои продукты  в целом  и, городскую среду. Накопленный опыт, уверенность в своих силах и команда грамотных проектировщиков и архитекторов определили следующую цель для группы компаний - жилое, многоэтажное строительство. </p>
-                <a href="javascript:void(0)" class="company__more">Узнать больше о застройщике</a>
+                Группа компаний Оникс - профессионал на рынке строительства Перми. За плечами годы успешного опыта в сфере коммерческой недвижимости. Строительным подразделением группы, начиная с 2011 года, успешно реализовано более 10-ти проектов зданий различного назначения, в том числе под обязательным Государственным строительным надзором, среди объектов: ТЦ «Браво» (ул. Светлогорская,20), ТЦ «Краснов» (ул. Солдатова, 28а), Автосалон «KIA» (ул. Спешилова, 77), офисное здание по ул. Островского, 44а, и т.д. Это примеры реализации проектов, где воплотился целостный подход к строительству, в котором сочетаются и продуманная архитектура, грамотная организация общественного пространства и благоустройство среды . Объекты, которые показывают, что группа компаний Оникс – успешный застройщик, постоянно улучшающий стандарты работы, свои продукты в целом, и городскую среду. Накопленный опыт, уверенность в своих силах и команда грамотных проектировщиков и архитекторов определили следующую цель для группы компаний - жилое, многоэтажное строительство.</p>
             </div>
         </div>
         <div class="company__documents">
@@ -750,72 +765,67 @@
                         <p class="documents__toggle">Информация об объекте строительства</p>
 
                         <nav class="documents__body">
-                            <a href="docs/Выписка из ЕГРН на земельный участок от 27.06.19.pdf" target="_blank">
+                            <a href="docs/egrn.pdf" target="_blank">
                                 <span class="name">Выписка из ЕГРН на земельный участок от 27.06.19</span>
                                 <span class="size">PDF, 2,6 Мб</span>
                             </a>
 
-                            <a href="docs/Договор ДУ квартира (типовой).pdf" target="_blank">
+                            <a href="docs/du-type.pdf" target="_blank">
                                 <span class="name">Договор ДУ квартира (типовой)</span>
                                 <span class="size">PDF, 0,2 Мб</span>
                             </a>
 
-                            <a href="docs/Заключение о соответствии Застройщика и проектной декларации г. Пермь, ул. Буксирная, 10.pdf" target="_blank">
+                            <a href="docs/zaklychenie.pdf" target="_blank">
                                 <span class="name">Заключение о соответствии Застройщика и проектной декларации г. Пермь, ул. Буксирная, 10</span>
                                 <span class="size">PDF, 1,5 Мб</span>
                             </a>
 
-                            <a href="docs/Извещение о начале строительства.pdf" target="_blank">
+                            <a href="docs/izveschenie.pdf" target="_blank">
                                 <span class="name">Извещение о начале строительства</span>
                                 <span class="size">PDF, 1,7 Мб</span>
                             </a>
 
-                            <a href="docs/Положительное заключение экспертизы.pdf" target="_blank">
+                            <a href="docs/ekspertiza.pdf" target="_blank">
                                 <span class="name">Положительное заключение экспертизы</span>
                                 <span class="size">PDF, 19,9 Мб</span>
                             </a>
 
-                            <a href="docs/Проектная декларация от 01.07.2019.pdf" target="_blank">
+                            <a href="docs/dekladartciya010719.pdf" target="_blank">
                                 <span class="name">Проектная декларация от 01.07.2019</span>
                                 <span class="size">PDF, 0,2 Мб</span>
                             </a>
 
-                            <a href="docs/Проектная декларация от 04.07.2019.pdf" target="_blank">
+                            <a href="docs/dekladartciya040719.pdf" target="_blank">
                                 <span class="name">Проектная декларация от 04.07.2019</span>
                                 <span class="size">PDF, 0,2 Мб</span>
                             </a>
 
-                            <a href="docs/Проектная декларация от 10.07.2019.pdf" target="_blank">
+                            <a href="docs/dekladartciya100719.pdf" target="_blank">
                                 <span class="name">Проектная декларация от 10.07.2019</span>
                                 <span class="size">PDF, 0,2 Мб</span>
                             </a>
 
-                            <a href="docs/Проектная декларация от 20.06.2019.pdf" target="_blank">
+                            <a href="docs/dekladartciya200619.pdf" target="_blank">
                                 <span class="name">Проектная декларация от 20.06.2019</span>
                                 <span class="size">PDF, 0,2 Мб</span>
                             </a>
 
-                            <a href="docs/Проектная декларация от 10.07.19.pdf" target="_blank">
-                                <span class="name">Проектная декларация от 10.07.2019</span>
-                                <span class="size">PDF, 0,2 Мб</span>
-                            </a>
-
-                            <a href="docs/Проектная декларация от 18.07.2019.pdf" target="_blank">
+                            <a href="docs/dekladartciya180719.pdf" target="_blank">
                                 <span class="name">Проектная декларация от 18.07.2019</span>
                                 <span class="size">PDF, 0,2 Мб</span>
                             </a>
 
-                            <a href="docs/Проектная декларация от 22.04.2019.pdf" target="_blank">
+                            <a href="docs/dekladartciya220419.pdf" target="_blank">
                                 <span class="name">Проектная декларация от 22.04.2019</span>
                                 <span class="size">PDF, 0,2 Мб</span>
                             </a>
 
-                            <a href="docs/Проектная декларация от 31.07.2019.pdf" target="_blank">
+                            <a href="docs/dekladartciya310719.pdf" target="_blank">
                                 <span class="name">Проектная декларация от 31.07.2019</span>
                                 <span class="size">PDF, 0,2 Мб</span>
                             </a>
 
-                            <a href="docs/Разрешение на строительство2.pdf" target="_blank">
+                            <a href="docs/razreshenie.pdf" target="_blank">
                                 <span class="name">Разрешение на строительство</span>
                                 <span class="size">PDF, 1,4 Мб</span>
                             </a>
@@ -829,13 +839,13 @@
 </section>
     
 
-<section class="company steps" data-scroll="company">
+<section class="company steps" data-scroll="steps">
     <div class="container">
         <div class="company__header">
             <h2>ход строительства</h2>
             <div class="ready">
                 <span class="desc">Степень готовности</span>
-                <span class="count">5%</span>
+                <span class="count">19%</span>
                 <div class="bar"><span></span></div>
             </div>
         </div>
@@ -846,8 +856,6 @@
         </nav>
         <div class="active company__tab" data-tab="2019">
             <nav class="company__nav company__nav-sub">
-                <a href="javascript:void(0)" data-tab="19marth">Март</a>
-                <a href="javascript:void(0)" data-tab="19april">Апрель</a>
                 <a href="javascript:void(0)" data-tab="19may">Май</a>
                 <a href="javascript:void(0)" data-tab="19june">Июнь</a>
                 <a href="javascript:void(0)" data-tab="19july">Июль</a>
@@ -857,30 +865,16 @@
                 <a href="javascript:void(0)" disable data-tab="19noveber">Ноябрь</a>
                 <a href="javascript:void(0)" disable data-tab="19december">Декабрь</a>
             </nav>
-            <div class="company__tab" data-tab="19marth">
-                <div class="marth19 swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide" style="background-image: url('img/IMG-b7154c6caa556c6c64a32c67f4ab26b8-V.jpg')"></div>
-                        <div class="swiper-slide" style="background-image: url('img/IMG-bfcf2e289b73493f05581e0eafa33abd-V.jpg')"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="company__tab" data-tab="19april">
-                <div class="april19 swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide" style="background-image: url('img/IMG_20190411_093724.jpg')"></div>
-                        <div class="swiper-slide" style="background-image: url('img/IMG_20190415_094236.jpg')"></div>
-                        <div class="swiper-slide" style="background-image: url('img/IMG_20190415_094422.jpg')"></div>
-                        <div class="swiper-slide" style="background-image: url('img/IMG_20190422_093857.jpg')"></div>
-                        <div class="swiper-slide" style="background-image: url('img/IMG_20190422_094153.jpg')"></div>
-                    </div>
-                </div>
-            </div>
             <div class="company__tab" data-tab="19may">
                 <div class="may19 swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide" style="background-image: url('img/IMG_20190508_092629.jpg')"></div>
                         <div class="swiper-slide" style="background-image: url('img/IMG_20190508_092635.jpg')"></div>
+                        <div class="swiper-slide" style="background-image: url('img/IMG_20190411_093724.jpg')"></div>
+                        <div class="swiper-slide" style="background-image: url('img/IMG_20190415_094236.jpg')"></div>
+                        <div class="swiper-slide" style="background-image: url('img/IMG_20190415_094422.jpg')"></div>
+                        <div class="swiper-slide" style="background-image: url('img/IMG_20190422_093857.jpg')"></div>
+                        <div class="swiper-slide" style="background-image: url('img/IMG_20190422_094153.jpg')"></div>
                     </div>
                 </div>
             </div>
@@ -924,7 +918,96 @@
     </div>
 </section>
 
-<section class="contacts">
+<section class="press">
+    <div class="container">
+        <h2>Пресс-центр</h2>
+
+        <div class="press__item">
+            <h3 class="press__title">Новый дом «Дядя Стёпа»</h3>
+            <p class="press__time"><img src="img/clock.svg" alt=""> <span>10 мая 2019 в 18:51</span></p>
+            <p class="press__text">Новый дом «Дядя Степа» в Перми – это дом комфорт-класса, где удобно жить и приятно дружить с соседями. Новостройка «Дядя Степа» будет возведена  в микрорайоне Водники, Кировского района. Это район с удобной инфраструктурой, лесом и рекой. </p>
+            <div class="press__full">
+                ЖК «Дядя Степа» будет настоящим великаном, первым домом в 26 этажей в микрорайоне.  <br> <br>
+
+                На старте продаж вы сможете купить квартиру в жилом доме «Дядя Степа» по выгодной цене. <br> <br>
+
+                Квартиры в ЖК «Дядя Степа» представлены на любой вкус и размер семьи. <br> <br>
+
+                Новый дом «Дядя Степа» – это доступный уют от надежного застройщика ООО «Оникс».
+            </div>
+            <p class="press__arrow"><span>Читать далее</span> <img src="img/right-arrow.svg" alt=""></p>
+        </div>
+
+        <div class="press__item">
+            <h3 class="press__title">Жилье в комфортабельной постройке в Перми</h3>
+            <p class="press__time"><img src="img/clock.svg" alt=""> <span>18 мая 2019 в 12:33</span></p>
+            <p class="press__text"><strong>Новый дом «Дядя Степа» в Перми,</strong> настоящий великан в 26 этажей. Предлагаются
+квартиры для разных семей со стандартным количеством квадратных метров.</p>
+            <div class="press__full">
+                Отличительные особенности: <br>
+
+                <ul>
+                    <li>комфортабельное жилье нового класса;</li>
+                    <li>район с удобной инфраструктурой;</li>
+                    <li>квартиры разного бюджетного класса;</li>
+                    <li>стоимость от одного миллиона рублей;</li>
+                    <li>жилплощадь от надежного застройщика ООО «Оникс».</li>
+                </ul>
+                Возведена постройка «Дядя Степа» в Водники, Кировского района. ЖК имеет удобное
+                расположение и продуманную инфраструктуру. Приятное дополнение – рядом лес и река.
+                Проживать в таком доме удобно вне зависимости от возраста – найдется интересная
+                квартира и для молодых, и для пожилых людей.<br><br>
+
+                Новостройка «Дядя Степа» отличается повышенной комфортностью. Предлагаются
+                квартиры как для больших, так и для маленьких семей. Старт продаж от 1 млн рублей,
+                поэтому уже сейчас можно приобрести жилплощадь в новостройке по выгодной цене.<br><br>
+
+                «Дядя Степа» - это доступный уют для каждого. Территория облагорожена. Вид из
+                каждого окна открывается красивый на просторный лес. Возведением жилого комплекса
+                занималась компания «Оникс», которая закрепилась на рынке как надежная и стабильная.
+
+
+            </div>
+            <p class="press__arrow"><span>Читать далее</span> <img src="img/right-arrow.svg" alt=""></p>
+        </div>
+
+        <!-- <a href="javascript:void(0)" class="btn btn-blue">Перейти в раздел</a> -->
+    
+        <!-- <div class="found">
+            <p>Нас так же ищут:</p>
+            <div class="found__list">
+                <span>Дядя Степа в Перми</span>
+                <span>Дом Дядя Степа</span>
+                <span>Дядя Степа дом Пермь</span>
+                <span>ЖК Дядя Степа Пермь</span>
+                <span>Степа дом Пермь</span>
+                <span>Квартира в Дяде Степе</span>
+                <span>Новостройка Дядя Степа</span>
+                <span>Купить квартиру в Дяде Степе</span>
+                <span>Квартиры в ЖК Дядя Степа</span>
+                <span>Жилой комплекс Дядя Степа Пермь</span>
+                <span>Новый дом Дядя Степа в Перми</span>
+            </div>
+        </div> -->
+    </div>
+</section>
+
+<section class="newsletter">
+    <div class="container">
+        <div class="flex">
+            <p class="newsletter__title"><span>Подпишитесь</span> <br>
+                на нашу рассылку</p>
+            <form class="newsletter__form" action="form.php" method="POST">
+                <input type="email" name="email" placeholder="Ваш e-mail">
+                <input type="hidden" name="hide" value="newsletter">
+                <button class="btn btn-gray" type="submit">Подписаться</button>
+            </form>
+        </div>
+        <p class="questions__desc">Нажимая кнопку «Подписаться», <a href="javascript:void(0)" data-modal="policy">Вы соглашаетесь с условиями обработки и хранения персональных данных</a></p>
+    </div>
+</section>
+
+<section class="contacts" data-scroll="contacts">
     <div class="flex">
         <div class="contacts__desc">
             <div class="info">
@@ -936,35 +1019,34 @@
                 </p>
                 <p>Работаем в будни 09:00—18:00 <br>
                     <strong>Если нужно, встретимся в любое другое удобное для вас время!</strong></p>
-                <p class="press">Пресс-центр</p>
             </div>
         </div>
         <div class="map" id="footer"></div>
     </div>
 </section>
 
-<footer class="footer" data-scroll="footer">
+<section class="footer" data-scroll="footer">
     <div class="container">
         <p>Застройщик вправе вносить изменения в проектную документацию до момента ввода многоквартирного дома в эксплуатацию. Изображения отделки квартир и мест общего пользования, холлов, а также 
         изображения придомовой территории являются компьютерной моделью и могут отличаться от фактического исполнения, что может быть связано с искажением цветопередачи при просмотре и печати 
         изображения и прочими факторами. Изображения отделки квартир, мест общего пользования, холлов, а также изображения придомовой территории могут содержать элементы художественного вымысла. 
-        Изображенные мебель, бытовая техника, предметы интерьера в состав и стоимость отделки не входят. Застройщик ООО «Оникс». Проектная декларация размещена на сайте наш.дом.рф 
+        Изображенные мебель, бытовая техника, предметы интерьера в состав и стоимость отделки не входят. Застройщик ООО «Оникс». Проектная декларация размещена на сайте наш.дом.рф, дядя-степа-дом.рф
         С подробной информацией о помещениях, об условиях их приобретения, об условиях акций можно ознакомиться на сайте застройщика и 
         в офисе продаж по адресу г. Пермь, ул. Николая Островского, 44а. Предложение не является публичной офертой.</p>
 
-        <a href="javascript:void(0)" class="policy" data-modal="policy">Политика обработки персональных данных</a>
+        <a href="javascript:void(0)" data-modal="policy" class="policy">Политика обработки персональных данных</a>
         <a href="http://prime59.ru" target="_blank" class="dev"><img src="img/prime.svg" alt="" width="76"></a>
 
     </div>
     <img src="img/footer.svg" width="375" alt="" class="footer__man">
-</footer>
+</section>
 
 <img src="img/call.svg" width="80" alt="" class="call">
 <div class="callme">
     <div class="callme__close"></div>
     <div class="callme__content">
         <p class="callme__title">Здравствуйте. Хотите, <br> чтобы мы перезвоним вам?</p>
-        <p>Оставьте свои контакты и через 5 минут <br> с вами свяжется наш менеджер. </p>
+        <p>Оставьте свои контакты и в ближайшее время с вами свяжется наш специалист</p>
         <form class="callme__form" method="POST" action="form.php">
             <div class="form-group">
                 <input type="text" name="name">
@@ -978,9 +1060,9 @@
             <button class="btn btn-blue" type="submit">Позвоните мне!</button>
         </form>
         <span>Нажимая на кнопку «Позвоните мне», я даю <br>
-                своё согласие на обработку моих <br>
-                персональных данных и <a href="javascript:void(0)" data-modal="policy">принимаю условия <br>
-                    соглашения</a></span>
+            своё согласие на обработку моих <br>
+            персональных данных и <a href="javascript:void(0)" data-modal="policy">принимаю условия <br>
+            соглашения</a></span>
     </div>
 </div>
 
@@ -990,7 +1072,7 @@
     <div class="modal" data-modal="request">
         <div class="modal__close"></div>
         <p class="modal__title">Отправить заявку на покупку <br> с сертификатом</p>
-        <p>Оставьте свои контакты и через 5 минут  с вами свяжется наш <br> менеджер. </p>
+        <p>Оставьте свои контакты и в ближайшее время с вами свяжется наш специалист</p>
         <form method="POST" action="form.php" class="request__form">
             <div class="form-group">
                 <input type="text" name="name">
@@ -1006,7 +1088,7 @@
             </div>
             <input type="hidden" name="hide" value="request">
             <div class="form-group">
-                <input type="checkbox" id="check">
+                <input type="checkbox" checked id="check">
                 <label for="check">Я согласен с <a href="javascript:void(0)" data-modal="policy">условиями обработки персональных данных</a></label>
             </div>
             <button class="btn btn-blue" type="submit">Отправить</button>
@@ -1016,7 +1098,7 @@
     <div class="modal" data-modal="tradein">
         <div class="modal__close"></div>
         <p class="modal__title">Отправить заявку на Trade-in</p>
-        <p>Оставьте свои контакты и через 5 минут  с вами свяжется наш <br> менеджер. </p>
+        <p>Оставьте свои контакты и в ближайшее время с вами свяжется наш специалист</p>
         <form method="POST" action="form.php" class="tradein__form">
             <div class="form-group">
                 <input type="text" name="name">
@@ -1032,7 +1114,7 @@
             </div>
             <input type="hidden" name="hide" value="tradein">
             <div class="form-group">
-                <input type="checkbox" id="check1">
+                <input type="checkbox" checked id="check1">
                 <label for="check1">Я согласен с <a href="javascript:void(0)" data-modal="policy">условиями обработки персональных данных</a></label>
             </div>
             <button class="btn btn-blue" type="submit">Отправить</button>
@@ -1042,7 +1124,7 @@
     <div class="modal" data-modal="installment">
         <div class="modal__close"></div>
         <p class="modal__title">Отправить заявку на рассрочку</p>
-        <p>Оставьте свои контакты и через 5 минут  с вами свяжется наш <br> менеджер.</p>
+        <p>Оставьте свои контакты и в ближайшее время с вами свяжется наш специалист</p>
         <form method="POST" action="form.php" class="installment__form">
             <div class="form-group">
                 <input type="text" name="name">
@@ -1058,7 +1140,7 @@
             </div>
             <input type="hidden" name="hide" value="installment">
             <div class="form-group">
-                <input type="checkbox" id="check2">
+                <input type="checkbox" checked id="check2">
                 <label for="check2">Я согласен с <a href="javascript:void(0)" data-modal="policy">условиями обработки персональных данных</a></label>
             </div>
             <button class="btn btn-blue" type="submit">Отправить</button>
@@ -1068,7 +1150,7 @@
     <div class="modal" data-modal="mortgage">
         <div class="modal__close"></div>
         <p class="modal__title">Отправить заявку на ипотеку</p>
-        <p>Оставьте свои контакты и через 5 минут  с вами свяжется наш <br> менеджер.</p>
+        <p>Оставьте свои контакты и в ближайшее время с вами свяжется наш специалист</p>
         <form method="POST" action="form.php" class="mortgage__form">
             <div class="form-group">
                 <input type="text" name="name">
@@ -1084,7 +1166,7 @@
             </div>
             <input type="hidden" name="hide" value="mortgage">
             <div class="form-group">
-                <input type="checkbox" id="check3">
+                <input type="checkbox" checked id="check3">
                 <label for="check3">Я согласен с <a href="javascript:void(0)" data-modal="policy">условиями обработки персональных данных</a></label>
             </div>
             <button class="btn btn-blue" type="submit">Отправить</button>
@@ -1094,7 +1176,7 @@
     <div class="modal" data-modal="price">
         <div class="modal__close"></div>
         <p class="modal__title">Получить прайс</p>
-        <p>Оставьте свои контакты и через 5 минут  с вами свяжется наш <br> менеджер.</p>
+        <p>Оставьте свои контакты и в ближайшее время с вами свяжется наш специалист</p>
         <form method="POST" action="form.php" class="price__form">
             <div class="form-group">
                 <input type="text" name="name">
@@ -1110,7 +1192,7 @@
             </div>
             <input type="hidden" name="hide" value="price">
             <div class="form-group">
-                <input type="checkbox" id="check5">
+                <input type="checkbox" checked id="check5">
                 <label for="check5">Я согласен с <a href="javascript:void(0)" data-modal="policy">условиями обработки персональных данных</a></label>
             </div>
             <button class="btn btn-blue" type="submit">Получить</button>
@@ -1131,7 +1213,6 @@
                 <div class="modal-next swiper-button-next"></div>
                 <div class="modal-prev swiper-button-prev"></div>
             </div>
-            <p class="design">Дизайнерские решения типовых квартир</p>
         </div>
         <div>
             <p class="modal__title">Свяжитесь со специалистом <br>
@@ -1155,7 +1236,7 @@
                 </div>
                 <input type="hidden" name="hide" value="specialist">
                 <div class="form-group">
-                    <input type="checkbox" id="check6">
+                    <input type="checkbox" checked id="check6">
                     <label for="check6">Я согласен с <a href="javascript:void(0)" data-modal="policy">условиями обработки <br> персональных данных</a></label>
                 </div>
                 <button class="btn btn-yellow" type="submit">Перезвоните мне</button>
@@ -1177,7 +1258,6 @@
                 <div class="modal-next swiper-button-next"></div>
                 <div class="modal-prev swiper-button-prev"></div>
             </div>
-            <p class="design">Дизайнерские решения типовых квартир</p>
         </div>
         <div>
             <p class="modal__title">Свяжитесь со специалистом <br>
@@ -1201,7 +1281,7 @@
                 </div>
                 <input type="hidden" name="hide" value="specialist">
                 <div class="form-group">
-                    <input type="checkbox" id="check6">
+                    <input type="checkbox" checked id="check6">
                     <label for="check6">Я согласен с <a href="javascript:void(0)" data-modal="policy">условиями обработки <br> персональных данных</a></label>
                 </div>
                 <button class="btn btn-yellow" type="submit">Перезвоните мне</button>
@@ -1223,7 +1303,6 @@
                 <div class="modal-next swiper-button-next"></div>
                 <div class="modal-prev swiper-button-prev"></div>
             </div>
-            <p class="design">Дизайнерские решения типовых квартир</p>
         </div>
         <div>
             <p class="modal__title">Свяжитесь со специалистом <br>
@@ -1247,7 +1326,7 @@
                 </div>
                 <input type="hidden" name="hide" value="specialist">
                 <div class="form-group">
-                    <input type="checkbox" id="check6">
+                    <input type="checkbox" checked id="check6">
                     <label for="check6">Я согласен с <a href="javascript:void(0)" data-modal="policy">условиями обработки <br> персональных данных</a></label>
                 </div>
                 <button class="btn btn-yellow" type="submit">Перезвоните мне</button>
@@ -1270,7 +1349,6 @@
                 <div class="modal-next swiper-button-next"></div>
                 <div class="modal-prev swiper-button-prev"></div>
             </div>
-            <p class="design">Дизайнерские решения типовых квартир</p>
         </div>
         <div>
             <p class="modal__title">Свяжитесь со специалистом <br>
@@ -1317,7 +1395,6 @@
                 <div class="modal-next swiper-button-next"></div>
                 <div class="modal-prev swiper-button-prev"></div>
             </div>
-            <p class="design">Дизайнерские решения типовых квартир</p>
         </div>
         <div>
             <p class="modal__title">Свяжитесь со специалистом <br>
@@ -1364,7 +1441,6 @@
                 <div class="modal-next swiper-button-next"></div>
                 <div class="modal-prev swiper-button-prev"></div>
             </div>
-            <p class="design">Дизайнерские решения типовых квартир</p>
         </div>
         <div>
             <p class="modal__title">Свяжитесь со специалистом <br>
@@ -1396,6 +1472,47 @@
         </div>
     </div>
 
+    <div class="modal" data-modal="pantry">
+        <div class="modal__close"></div>
+        <div>
+            <p class="modal__title">Вместительные кладовые</p>
+            <p>Площадь квартир <span>от 2,83 до 5,67 м2</span></p>
+
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image: url('img/k1.jpg'); background-size: cover;"></div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <p class="modal__title">Выбрать идеальную кладовую вам поможет наш специалист</p>
+
+            <div class="specialist">
+                <img src="img/specialist1.png" alt="">
+                <div>
+                    <p><span>Алиса Сырвачева</span> <br> руководитель офиса продаж</p>
+                    <a href="tel:+79194553000">+7 919-455-30-00</a>
+                </div>
+            </div>
+            <form method="POST" action="form.php" class="apartments__form">
+                <div class="form-group">
+                    <input type="text" name="name">
+                    <label for="">Ваше имя</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="phone">
+                    <label for="">Телефон</label>
+                </div>
+                <input type="hidden" name="hide" value="specialist">
+                <div class="form-group">
+                    <input type="checkbox" checked id="check6">
+                    <label for="check6">Я согласен с <a href="javascript:void(0)" data-modal="policy">условиями обработки <br> персональных данных</a></label>
+                </div>
+                <button class="btn btn-yellow" type="submit">Перезвоните мне</button>
+            </form>
+        </div>
+    </div>
+    
     <div class="modal" data-modal="policy">
         <div class="body">
             <div class="modal__close"></div>
@@ -1510,7 +1627,7 @@
     <div class="modal" data-modal="more">
         <div class="modal__close"></div>
         <p class="modal__title">Остались вопросы?</p>
-        <p>Оставьте свои контакты и через 5 минут  с вами свяжется наш <br> менеджер.</p>
+        <p>Оставьте свои контакты и в ближайшее время с вами свяжется наш специалист</p>
         <form method="POST" action="form.php" class="more__form">
             <div class="form-group">
                 <input type="text" name="name">
@@ -1526,11 +1643,52 @@
             </div>
             <input type="hidden" name="hide" value="more">
             <div class="form-group">
-                <input type="checkbox" id="check4">
+                <input type="checkbox" checked id="check4">
                 <label for="check4">Я согласен с <a href="javascript:void(0)" data-modal="policy">условиями обработки персональных данных</a></label>
             </div>
             <button class="btn btn-blue" type="submit">Отправить</button>
         </form>
+    </div>
+
+    <div class="modal" data-modal="design">
+        <div class="modal__close"></div>
+        <p class="modal__title">Заказать дизайн-проект</p>
+        <p>Оставьте свои контакты и в ближайшее время с вами свяжется наш специалист</p>
+        <form method="POST" action="form.php" class="more__form">
+            <div class="form-group">
+                <input type="text" name="type">
+                <label for="">Тип квартиры</label>
+            </div>
+            <div class="form-group">
+                <input type="text" name="name">
+                <label for="">Ваше имя</label>
+            </div>
+            <div class="form-group">
+                <input type="text" name="phone">
+                <label for="">Телефон</label>
+            </div>
+            <div class="form-group">
+                <input type="email" name="email">
+                <label for="">Email</label>
+            </div>
+            <input type="hidden" name="hide" value="design">
+            <div class="form-group">
+                <input type="checkbox" checked id="check4">
+                <label for="check4">Я согласен с <a href="javascript:void(0)" data-modal="policy">условиями обработки персональных данных</a></label>
+            </div>
+            <button class="btn btn-blue" type="submit">Заказать</button>
+        </form>
+    </div>
+
+    <div class="modal" data-modal="success">
+        <svg width="74px" height="74px" viewBox="0 0 74 74">
+            <circle class="st0" cx="37" cy="37" r="33"/>
+            <polyline class="st0" points="21.338,35.791 32.733,46.629 52.662,27.371"/>
+        </svg>
+
+        <p class="modal__title">Заявка отправлена</p>
+        <p>Мы свяжемся с вами в ближайшее <br> время</p>
+        <a href="javascript:void(0)" class="btn">Закрыть</a>
     </div>
 
 </div>
