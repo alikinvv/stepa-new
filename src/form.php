@@ -1,3 +1,4 @@
+ 
 <?php 
 
 require_once('phpmailer/PHPMailerAutoload.php');
@@ -15,7 +16,7 @@ $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, 
 $mail->Port = 465; // TCP port to connect to / этот порт может отличаться у других провайдеров
 
 $mail->setFrom('phpmails@yandex.ru'); // от кого будет уходить письмо?
-$mail->addAddress('sales@oniks.info');     // Кому будет уходить письмо  sales@oniks.info
+$mail->addAddress('sales@oniks.info');     // Кому будет уходить письмо 
 //$mail->addAddress('ellen@example.com');               // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
 //$mail->addCC('cc@example.com');
@@ -67,6 +68,11 @@ if ($_POST['hide'] === 'mortgage') {
 if ($_POST['hide'] === 'more') {
     $mail->Subject = 'Заявка на звонок с сайта Дядя Степа';
     $mail->Body    = 'Пользователь: ' . $_POST['name'] . ', оставил заявку на обратный звонок, его почта: ' . $_POST['email'] . ' и телефон: ' . $_POST['phone'];
+}
+
+if ($_POST['hide'] === 'design') {
+    $mail->Subject = 'Заявка на дизайн-проект с сайта Дядя Степа';
+    $mail->Body    = 'Пользователь: ' . $_POST['name'] . ', оставил заявку на заказ дизайн-проекта, его почта: ' . $_POST['email'] . ', телефон: ' . $_POST['phone'] . ', выбранный тип квартиры: ' . $_POST['type'];
 }
 
 if ($_POST['hide'] === 'price') {

@@ -1,10 +1,6 @@
 //= template/header.html
 <!-- START CONTENT  -->
 
-<div class="loader">
-    <img src="img/loader.svg" width="400" alt="">
-</div>
-
 <div class="scrolltop" style="display: none">
     <img src="img/up.svg" width="50" alt="">
 </div>
@@ -26,7 +22,7 @@
             </a>
         </div>
         <nav class="header__menu">
-            <a href="javascript:void(0)" data-scroll="view">Вид из окон</a>
+            <a href="javascript:void(0)" data-scroll="map-wrap">Буксирная, 10</a>
             <a href="javascript:void(0)" data-scroll="steps">Ход строительства</a>
         </nav>
         <a href="tel:+73422999888" class="header__phone">+7 (342) <span>2-999-888</span></a>
@@ -38,7 +34,6 @@
     <div class="container">
         <div>
             <nav>
-                <a href="javascript:void(0)" data-scroll="main">Выбор квартиры</a>
                 <a href="javascript:void(0)" data-scroll="features">О доме</a>
                 <a href="javascript:void(0)" data-scroll="map-wrap">Инфраструктура</a>
                 <a href="javascript:void(0)" data-scroll="apartments">Квартиры</a>
@@ -66,7 +61,7 @@
 <section class="main" data-scroll="main">
     <div class="swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide" style="background-image: url('img/main2.jpg')">
+            <div class="swiper-slide slide1">
                 <div class="container">
                     <div class="main__info">
                         <h2>Знал в районе весь народ, на Буксирной, 10 <br>
@@ -76,7 +71,7 @@
                     </div>
                 </div>
             </div>
-            <div class="swiper-slide" style="background-image: url('img/main1.jpg')">
+            <div class="swiper-slide slide2">
                 <div class="container">
                     <div class="main__info">
                         <h2>Узнавали «Дядю Стёпу» за такую высоту, <br>
@@ -86,7 +81,7 @@
                     </div>
                 </div>
             </div>
-            <div class="swiper-slide" style="background-image: url('img/main3.jpg')">
+            <div class="swiper-slide slide3">
                 <div class="container">
                     <div class="main__info">
                         <h2>Это просто загляденье — <br>
@@ -302,7 +297,7 @@
                     доступная набережная реки Камы и лес подарят <br>
                     вам счастье и умиротворение.<br><br>
                     
-                    Микрорайон «Водники» - это лучшее место для <br>
+                    Микрорайон «Водники» - это идеальное место для <br>
                     уединения от суеты большого города</span></div>
             <div class="item"><img src="img/ra2.jpg" alt=""><span><strong>Удобная транспортная доступность</strong><br>
                     - 20 минут до центра города на автомобиле<br>
@@ -321,7 +316,7 @@
     </div>
 </section>
 
-<section class="apartments" data-scroll="apartments">
+<section class="apartments" id="planirovki" data-scroll="apartments">
     <div class="container">
         <h2>функциональные планировки <br> <span>рациональное использование каждого метра квартиры</span></h2>
 
@@ -502,7 +497,7 @@
     </div>
 </section>
 
-<section class="variants" data-scroll="variants">
+<section class="variants" id="otdelka" data-scroll="variants">
     <div class="container">
         <h2>варианты отделки</h2>
         <div class="item">
@@ -520,7 +515,7 @@
                     <li>полная разводка электроснабжения, водоснабжения  <br> и водоотведения</li>
                     <li>установлены радиаторы, счётчики, домофон, унитаз  <br> и проведён интернет</li>
                 </ul>
-                <a href="docs/otdelka.pdf" target="_blank">Полное описание параметров отделки</a>
+                <a href="docs/parametri-otdelki.pdf" target="_blank">Полное описание параметров отделки</a>
             </div>
             <div class="slider s1">
                 <div class="swiper-container">
@@ -545,11 +540,11 @@
                 <p>ОСНОВНЫЕ ОСОБЕННОСТИ ОТДЕЛКИ:</p>
                 <ul>
                     <li>установлен натяжной потолок, наклеены обои, <br> линолеум</li>
-                    <li>установлены межкомнатные двери <br> (искуственный шпон)</li>
+                    <li>установлены межкомнатные двери <br> (искусственный шпон)</li>
                     <li>частичная отделка плиткой по периметру ванной и  <br> покраска</li>
                     <li>установлена ванна, сантехника, смесители и  <br> полотенцесушитель</li>
                 </ul>
-                <a href="docs/otdelka.pdf" target="_blank">Полное описание параметров отделки</a>
+                <a href="docs/parametri-otdelki.pdf" target="_blank">Полное описание параметров отделки</a>
             </div>
             <div class="slider s2">
                 <div class="swiper-container">
@@ -563,7 +558,7 @@
         </div>
         <div class="item">
             <div class="info">
-                <p><strong><span>КОМФОРТ —</span> <br> Чистовая отделка Комфорт-класса производится по <br>
+                <p><strong><span>ОНИКС КОМФОРТ —</span> <br> Чистовая отделка Комфорт-класса производится по <br>
                      специально разработанному дизайн-проекту, а <br>
                       материалы, используемые при ремонте, отличаются <br>
                        высокими качественными и эстетическими <br>
@@ -577,7 +572,7 @@
                     <li>использование материалов, сантехники, плитки <br> более высокого ценового сегмента</li>
                     <li>коммуникации скрыты, в ванной установлен экран</li>
                 </ul>
-                <a href="docs/otdelka.pdf" target="_blank">Полное описание параметров отделки</a>
+                <a href="docs/parametri-otdelki.pdf" target="_blank">Полное описание параметров отделки</a>
             </div>
             <div class="slider s3">
                 <div class="swiper-container">
@@ -603,7 +598,7 @@
             <a href="javascript:void(0)" data-tab="gos">госпрограммы</a>
         </nav>
         <div class="ways__body">
-            <div class="active ways__tab" data-tab="mortgage">
+            <div class="active ways__tab" id="ipoteka" data-tab="mortgage">
                 <p class="ways__title">выгодные условия ипотеки!</p>
                 <p>Максимально выгодные условия от ведущих банков-партнёров: ставка от 5%; <br>
                         первоначальный взнос от 10%. <br><br>
@@ -619,7 +614,7 @@
                 </div>
                 <p><strong>Рассчитать и подобрать выгодный для вас ипотечный кредит помогут наши специалисты</strong></p>
             </div>
-            <div class="ways__tab" data-tab="installment">
+            <div class="ways__tab" id="rasrochka" data-tab="installment">
                 <p class="ways__title">рассрочка 0%!</p>
                 <p><strong>Воспользуйтесь беспроцентной рассрочкой от застройщика для приобретения любой <br>
                      квартиры.</strong></p>
@@ -759,45 +754,11 @@
                                 <span class="size">PDF, 19,9 Мб</span>
                             </a>
 
-                            <a href="docs/dekladartciya010719.pdf" target="_blank">
-                                <span class="name">Проектная декларация от 01.07.2019</span>
+                            <a href="docs/dekladartciya220819.pdf" target="_blank">
+                                <span class="name">Проектная декларация от 22.08.2019</span>
                                 <span class="size">PDF, 0,2 Мб</span>
                             </a>
 
-                            <a href="docs/dekladartciya040719.pdf" target="_blank">
-                                <span class="name">Проектная декларация от 04.07.2019</span>
-                                <span class="size">PDF, 0,2 Мб</span>
-                            </a>
-
-                            <a href="docs/dekladartciya100719.pdf" target="_blank">
-                                <span class="name">Проектная декларация от 10.07.2019</span>
-                                <span class="size">PDF, 0,2 Мб</span>
-                            </a>
-
-                            <a href="docs/dekladartciya200619.pdf" target="_blank">
-                                <span class="name">Проектная декларация от 20.06.2019</span>
-                                <span class="size">PDF, 0,2 Мб</span>
-                            </a>
-
-                            <a href="docs/dekladartciya180719.pdf" target="_blank">
-                                <span class="name">Проектная декларация от 18.07.2019</span>
-                                <span class="size">PDF, 0,2 Мб</span>
-                            </a>
-
-                            <a href="docs/dekladartciya220419.pdf" target="_blank">
-                                <span class="name">Проектная декларация от 22.04.2019</span>
-                                <span class="size">PDF, 0,2 Мб</span>
-                            </a>
-
-                            <a href="docs/dekladartciya310719.pdf" target="_blank">
-                                <span class="name">Проектная декларация от 31.07.2019</span>
-                                <span class="size">PDF, 0,2 Мб</span>
-                            </a>
-
-                            <a href="docs/razreshenie.pdf" target="_blank">
-                                <span class="name">Разрешение на строительство</span>
-                                <span class="size">PDF, 1,4 Мб</span>
-                            </a>
                         </nav>
                     </div>
                 </div>
@@ -808,7 +769,7 @@
 </section>
     
 
-<section class="company steps" data-scroll="steps">
+<section class="company steps" id="hodstroy" data-scroll="steps">
     <div class="container">
         <div class="company__header">
             <h2>ход строительства</h2>
@@ -875,6 +836,12 @@
                         <div class="swiper-slide" style="background-image: url('img/PANO_20190801_091534.jpg')"></div>
                         <div class="swiper-slide" style="background-image: url('img/IMG_20190801_092740.jpg')"></div>
                         <div class="swiper-slide" style="background-image: url('img/IMG_20190801_092606.jpg')"></div>
+                        <div class="swiper-slide" style="background-image: url('img/IMG_20190814_103137.jpg')"></div>
+                        <div class="swiper-slide" style="background-image: url('img/IMG_20190807_100622.jpg')"></div>
+                        <div class="swiper-slide" style="background-image: url('img/IMG_20190807_100634.jpg')"></div>
+                        <div class="swiper-slide" style="background-image: url('img/IMG_20190814_103144.jpg')"></div>
+                        <div class="swiper-slide" style="background-image: url('img/PANO_20190807_100233.jpg')"></div>
+                        <div class="swiper-slide" style="background-image: url('img/PANO_20190807_100608.jpg')"></div>
                     </div>
                 </div>
             </div>
@@ -996,6 +963,9 @@
 
 <section class="footer" data-scroll="footer">
     <div class="container">
+        <a href="http://vk.com/dom.dyadya.stepa" target="_blank" class="vk">
+            <span>Присоединяйтесь к нам!</span><img src="img/vk.svg" width="32" alt="">
+        </a>
         <p>Застройщик вправе вносить изменения в проектную документацию до момента ввода многоквартирного дома в эксплуатацию. Изображения отделки квартир и мест общего пользования, холлов, а также 
         изображения придомовой территории являются компьютерной моделью и могут отличаться от фактического исполнения, что может быть связано с искажением цветопередачи при просмотре и печати 
         изображения и прочими факторами. Изображения отделки квартир, мест общего пользования, холлов, а также изображения придомовой территории могут содержать элементы художественного вымысла. 
@@ -1009,31 +979,6 @@
     </div>
     <img src="img/footer.svg" width="375" alt="" class="footer__man">
 </section>
-
-<img src="img/call.svg" width="80" alt="" class="call">
-<div class="callme">
-    <div class="callme__close"></div>
-    <div class="callme__content">
-        <p class="callme__title">Здравствуйте. Хотите, <br> чтобы мы перезвоним вам?</p>
-        <p>Оставьте свои контакты и в ближайшее время с вами свяжется наш специалист</p>
-        <form class="callme__form" method="POST" action="form.php">
-            <div class="form-group">
-                <input type="text" name="name">
-                <label for="">Ваше имя</label>
-            </div>
-            <div class="form-group">
-                <input type="text" name="phone">
-                <label for="">Телефон</label>
-            </div>
-            <input type="hidden" name="hide" value="callme">
-            <button class="btn btn-blue" type="submit">Позвоните мне!</button>
-        </form>
-        <span>Нажимая на кнопку «Позвоните мне», я даю <br>
-            своё согласие на обработку моих <br>
-            персональных данных и <a href="javascript:void(0)" data-modal="policy">принимаю условия <br>
-            соглашения</a></span>
-    </div>
-</div>
 
 <div class="backdrops"></div>
 

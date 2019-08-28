@@ -1,5 +1,6 @@
 let main = new Swiper('.main .swiper-container', {
     loop: true,
+    simulateTouch: false,
     autoplay: {
         delay: 10000,
     },
@@ -68,6 +69,12 @@ let apartments = new Swiper('.apartments .swiper-container', {
     loop: true,
     effect: 'fade',
     simulateTouch: false,
+    // breakpoints: {
+    //     1279: {
+    //         slidesPerView: 1,
+    //         spaceBetween: 10
+    //     }
+    // },
     navigation: {
         nextEl: '.apartments-next',
         prevEl: '.apartments-prev'
@@ -207,16 +214,6 @@ $('body').on('click', '.header__hamburger', (e) => {
     $(e.currentTarget).toggleClass('active');
     $('.menu').toggleClass('active');
     $('.header').toggleClass('active');
-});
-
-$('body').on('click', '.call', (e) => {
-    $('.callme').addClass('active');
-    $('.backdrops').addClass('active');
-});
-
-$('body').on('click', '.callme__close', (e) => {
-    $('.callme').removeClass('active');
-    $('.backdrops').removeClass('active');
 });
 
 var myMap = null;
@@ -532,7 +529,7 @@ $("a[data-scroll]").click((e) => {
 });
 
 $(window).on('scroll', () => {
-    if ($(window).scrollTop() >= $('.f2').offset().top) {
+    if ($(window).scrollTop() >= $('.f2').offset().top && $(window).widht >= 1280) {
         $('.scrolltop').fadeIn();
     } else {
         $('.scrolltop').fadeOut();
@@ -559,4 +556,12 @@ $('body').on('click', '.press__arrow:not(.active)', (e) => {
 $('body').on('click', '.press__arrow.active', (e) => {
     $(e.currentTarget).toggleClass('active').html('<span>Читать далее</span> <img src="img/right-arrow.svg" alt="">').css('margin-left', '0');
     $(e.currentTarget).parent().find('.press__full').slideToggle(300);
+});
+
+$('body').on('click', (e) => {
+    if ($('.menu').hasClass('active') && !$(e.target).is('.menu') && !$(e.target.offsetParent).is('.menu') && !$(e.target.offsetParent).is('.header') && !$(e.target).is('.header')) {
+        $('.menu').removeClass('active');
+        $('.header').removeClass('active');
+        $('.header__hamburger').removeClass('active');
+    }
 });
