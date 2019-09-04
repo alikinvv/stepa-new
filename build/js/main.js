@@ -1,3 +1,12 @@
+if ($(window).width() < 768) {
+    $('.modal[data-modal="solutions"] .btn').before($('.four.f1 .flex'));
+    $('.modal[data-modal="solutions2"] .btn').before($('.four.f2 .flex'));
+    $('.modal[data-modal="eskr"] .btn').before($('.icons .flex'));
+    $('.modal[data-modal="steps"] .btn').before($('.steps .company__nav'));
+    $('.modal[data-modal="steps"] .btn').before($('.steps .company__tab'));
+    $('.map-wrap .navigation').remove();
+}
+
 let main = new Swiper('.main .swiper-container', {
     loop: true,
     simulateTouch: false,
@@ -66,15 +75,14 @@ let s3 = new Swiper('.s3 .swiper-container', {
 });
 
 let apartments = new Swiper('.apartments .swiper-container', {
-    loop: true,
-    effect: 'fade',
-    simulateTouch: false,
-    // breakpoints: {
-    //     1279: {
-    //         slidesPerView: 1,
-    //         spaceBetween: 10
-    //     }
-    // },
+    slidesPerView: 'auto',
+    spaceBetween: 30,
+    breakpoints: {
+        767: {
+            spaceBetween: 10,
+            centeredSlides: true
+        }
+    },
     navigation: {
         nextEl: '.apartments-next',
         prevEl: '.apartments-prev'
@@ -204,6 +212,14 @@ $('body').on('click', '.company__nav a:not(.active)', (e) => {
     $(e.currentTarget).addClass('active');
 
     $('.company__tab[data-tab="' + $(e.currentTarget).attr('data-tab') + '"]').addClass('active');
+});
+
+$('body').on('click', '.modal[data-modal="steps"] .month a', (e) => {
+    $(e.currentTarget).parent().find('a').removeClass('active');
+    $('.modal[data-modal="steps"] .company__tab').removeClass('active');
+    $(e.currentTarget).addClass('active');
+
+    $('.modal[data-modal="steps"] .company__tab[data-tab="' + $(e.currentTarget).attr('data-tab') + '"]').addClass('active');
 });
 
 $('body').on('click', '.documents__toggle', (e) => {
@@ -398,6 +414,66 @@ $('body').on('click', '.shop', (e) => {
     $(e.currentTarget).addClass('active');
 });
 
+$('body').on('change', 'select', (e) => {
+    if ($(e.currentTarget).val() === 'all') {
+        ymaps.geoQuery(myMap.geoObjects).setOptions('visible', true);
+    }
+
+    if ($(e.currentTarget).val() === 'shop') {
+        ymaps.geoQuery(myMap.geoObjects).setOptions('visible', false);
+        ymaps.geoQuery(myMap.geoObjects).search('properties.category = "shop"').setOptions('visible', true);
+        ymaps.geoQuery(myMap.geoObjects).search('properties.category = "stepa"').setOptions('visible', true);
+    }
+
+    if ($(e.currentTarget).val() === 'school') {
+        ymaps.geoQuery(myMap.geoObjects).setOptions('visible', false);
+        ymaps.geoQuery(myMap.geoObjects).search('properties.category = "school"').setOptions('visible', true);
+        ymaps.geoQuery(myMap.geoObjects).search('properties.category = "stepa"').setOptions('visible', true);
+    }
+
+    if ($(e.currentTarget).val() === 'baby') {
+        ymaps.geoQuery(myMap.geoObjects).setOptions('visible', false);
+        ymaps.geoQuery(myMap.geoObjects).search('properties.category = "baby"').setOptions('visible', true);
+        ymaps.geoQuery(myMap.geoObjects).search('properties.category = "stepa"').setOptions('visible', true);
+    }
+
+    if ($(e.currentTarget).val() === 'bus') {
+        ymaps.geoQuery(myMap.geoObjects).setOptions('visible', false);
+        ymaps.geoQuery(myMap.geoObjects).search('properties.category = "bus"').setOptions('visible', true);
+        ymaps.geoQuery(myMap.geoObjects).search('properties.category = "stepa"').setOptions('visible', true);
+    }
+
+    if ($(e.currentTarget).val() === 'ambulance') {
+        ymaps.geoQuery(myMap.geoObjects).setOptions('visible', false);
+        ymaps.geoQuery(myMap.geoObjects).search('properties.category = "ambulance"').setOptions('visible', true);
+        ymaps.geoQuery(myMap.geoObjects).search('properties.category = "stepa"').setOptions('visible', true);
+    }
+
+    if ($(e.currentTarget).val() === 'banks') {
+        ymaps.geoQuery(myMap.geoObjects).setOptions('visible', false);
+        ymaps.geoQuery(myMap.geoObjects).search('properties.category = "banks"').setOptions('visible', true);
+        ymaps.geoQuery(myMap.geoObjects).search('properties.category = "stepa"').setOptions('visible', true);
+    }
+
+    if ($(e.currentTarget).val() === 'coffee') {
+        ymaps.geoQuery(myMap.geoObjects).setOptions('visible', false);
+        ymaps.geoQuery(myMap.geoObjects).search('properties.category = "coffee"').setOptions('visible', true);
+        ymaps.geoQuery(myMap.geoObjects).search('properties.category = "stepa"').setOptions('visible', true);
+    }
+
+    if ($(e.currentTarget).val() === 'saloon') {
+        ymaps.geoQuery(myMap.geoObjects).setOptions('visible', false);
+        ymaps.geoQuery(myMap.geoObjects).search('properties.category = "saloon"').setOptions('visible', true);
+        ymaps.geoQuery(myMap.geoObjects).search('properties.category = "stepa"').setOptions('visible', true);
+    }
+
+    if ($(e.currentTarget).val() === 'stadium') {
+        ymaps.geoQuery(myMap.geoObjects).setOptions('visible', false);
+        ymaps.geoQuery(myMap.geoObjects).search('properties.category = "stadium"').setOptions('visible', true);
+        ymaps.geoQuery(myMap.geoObjects).search('properties.category = "stepa"').setOptions('visible', true);
+    }
+});
+
 $('body').on('click', '.school', (e) => {
     ymaps.geoQuery(myMap.geoObjects).setOptions('visible', false);
     ymaps.geoQuery(myMap.geoObjects).search('properties.category = "school"').setOptions('visible', true);
@@ -504,7 +580,10 @@ $('body').on('click', '.modals', (e) => {
 });
 
 $(window).on('load', () => {
-    $('.ways__body').height($('.ways__body').height() + 40);
+    if ($(window).width >= 768) {
+        $('.ways__body').height($('.ways__body').height() + 40);
+    }
+
     $('.loader').animate({ opacity: 0 }, 500, () => { $('.loader').remove() })
     $('html').removeClass('loading');
 });
@@ -563,5 +642,25 @@ $('body').on('click', (e) => {
         $('.menu').removeClass('active');
         $('.header').removeClass('active');
         $('.header__hamburger').removeClass('active');
+    }
+});
+
+$('body').on('click', '.variants .toggle', (e) => {
+    if ($(e.currentTarget).hasClass('active')) {
+        $(e.currentTarget).removeClass('active');
+        $(`.variants .item[data-toggle="${$(e.currentTarget).attr('data-toggle')}"]`).slideUp().removeClass('active');
+    } else {
+        $(e.currentTarget).addClass('active');
+        $(`.variants .item[data-toggle="${$(e.currentTarget).attr('data-toggle')}"]`).slideDown().addClass('active');
+    }
+});
+
+$('body').on('click', '.ways .toggle', (e) => {
+    if ($(e.currentTarget).hasClass('active')) {
+        $(e.currentTarget).removeClass('active');
+        $(`.ways .ways__tab[data-toggle="${$(e.currentTarget).attr('data-toggle')}"]`).slideUp().removeClass('active');
+    } else {
+        $(e.currentTarget).addClass('active');
+        $(`.ways .ways__tab[data-toggle="${$(e.currentTarget).attr('data-toggle')}"]`).slideDown().addClass('active');
     }
 });

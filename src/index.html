@@ -61,16 +61,6 @@
 <section class="main" data-scroll="main">
     <div class="swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide slide1">
-                <div class="container">
-                    <div class="main__info">
-                        <h2>Знал в районе весь народ, на Буксирной, 10 <br>
-                            «ДЯДЯ СТЁПА» дом  растёт!</h2>
-
-                        <span>срок сдачи:  III кв. 2021</span>
-                    </div>
-                </div>
-            </div>
             <div class="swiper-slide slide2">
                 <div class="container">
                     <div class="main__info">
@@ -78,9 +68,23 @@
                             Каму видно за версту!</h2>
 
                         <span>срок сдачи:  III кв. 2021</span>
+                        <a href="javascript:void(0)" class="btn btn-yellow main__mobile">Буксирная, 10</a>
                     </div>
                 </div>
             </div>
+
+            <div class="swiper-slide slide1">
+                <div class="container">
+                    <div class="main__info">
+                        <h2>Знал в районе весь народ, на Буксирной, 10 <br>
+                            «ДЯДЯ СТЁПА» дом  растёт!</h2>
+
+                        <span>срок сдачи:  III кв. 2021</span>
+                        <a href="javascript:void(0)" class="btn btn-yellow main__mobile">Буксирная, 10</a>
+                    </div>
+                </div>
+            </div>
+            
             <div class="swiper-slide slide3">
                 <div class="container">
                     <div class="main__info">
@@ -88,6 +92,7 @@
                             Чудо-двор у «ДЯДИ СТЁПЫ»!</h2>
 
                         <span>срок сдачи:  III кв. 2021</span>
+                        <a href="javascript:void(0)" class="btn btn-yellow main__mobile">Буксирная, 10</a>
                     </div>
                 </div>
             </div>
@@ -95,6 +100,7 @@
     </div>
     <div class="main-next swiper-button-next"></div>
     <div class="main-prev swiper-button-prev"></div>
+
 </section>
 
 <section class="comfort" data-scroll="comfort">
@@ -239,9 +245,17 @@
     </div>
 </section>
 
-<section class="four" data-scroll="four">
+<section class="four f1" data-scroll="four">
     <div class="container">
         <h2>выгодные решения</h2>
+
+        <div class="mobile">
+            <p>— Комфорт по цене Эконом! <br>
+            — Автономная газовая котельная <br>
+            — Умный домофон <br>
+            — Фасад из керамогранита</p>
+            <a href="javascript:void(0)" data-modal="solutions" class="btn">Узнать подробнее</a>
+        </div>
         
         <div class="flex">
             <div class="item"><img src="img/r1.jpg" alt=""><span><strong>Комфорт по цене Эконом!</strong> <br>
@@ -280,6 +294,19 @@
                 <a class="saloon" href="javascript:void(0)"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-barber"></use></svg> <span>Салоны красоты</span></a>
                 <a class="stadium" href="javascript:void(0)"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-stadium"></use></svg> <span>Стадион</span></a>
             </nav>
+
+            <select name="" id="">
+                <option value="all">Все объекты</option>
+                <option value="shop">Магазины и ТЦ</option>
+                <option value="school">Детские сады и школы</option>
+                <option value="baby">Развивающие центры</option>
+                <option value="bus">Остановки транспорта</option>
+                <option value="ambulance">Аптеки и клиники</option>
+                <option value="banks">Банки и банкоматы</option>
+                <option value="coffee">Кафе и рестораны</option>
+                <option value="saloon">Салоны красоты</option>
+                <option value="stadium">Стадион</option>
+            </select>
             <div class="map" id="map">
 
             </div>
@@ -290,6 +317,13 @@
 <section class="four f2" data-scroll="four">
     <div class="container">
         <h2>расположен для жизни</h2>
+
+        <div class="mobile">
+            <p>— Зелёный район <br>
+            — Удобная транспортная доступность <br>
+            — Развитая инфраструктура</p>
+            <a href="javascript:void(0)" class="btn" data-modal="solutions2">Узнать подробнее</a>
+        </div>
         
         <div class="flex">
             <div class="item"><img src="img/ra1.jpg" alt=""><span><strong>Зелёный район</strong> <br>
@@ -322,52 +356,46 @@
 
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="apartments__item">
-                        <p class="apartments__title">1-комнатные <br>
-                                <span>от 34,52 до 36,32 м2</span></p>
-                        <img src="img/1.svg" alt="" class="apartments__img">
-                        <a href="javascript:void(0)" class="apartments__btn btn btn-blue" data-modal="apartments1">Узнать подробнее</a>
-                    </div>
-                    <div class="apartments__item">
-                        <p class="apartments__title">2-комнатные <br>
-                                <span>от 48,69 до 50,54 м2</span></p>
-                        <img src="img/2.svg" alt="" class="apartments__img">
-                        <a href="javascript:void(0)" class="apartments__btn btn btn-blue" data-modal="apartments2">Узнать подробнее</a>
-                    </div>
-                    <div class="apartments__item">
-                        <p class="apartments__title">3-комнатные <br>
-                                <span>от 59,12 до 60,32 м2</span></p>
-                        <img src="img/3.svg" alt="" class="apartments__img">
-                        <a href="javascript:void(0)" class="apartments__btn btn btn-blue" data-modal="apartments3">Узнать подробнее</a>
-                    </div>
+                <div class="swiper-slide apartments__item">
+                    <p class="apartments__title">1-комнатные <br>
+                            <span>от 34,52 до 36,32 м2</span></p>
+                    <img src="img/1.svg" alt="" class="apartments__img">
+                    <a href="javascript:void(0)" class="apartments__btn btn btn-blue" data-modal="apartments1">Узнать подробнее</a>
                 </div>
-                <div class="swiper-slide">
-                    <div class="apartments__item">
-                        <p class="apartments__title">студия<br>
-                            <span>от 20,75 до 25,40 м2</span></p>
-                        <img src="img/4.svg" alt="" class="apartments__img">
-                        <a href="javascript:void(0)" class="apartments__btn btn btn-blue" data-modal="apartmentss">Узнать подробнее</a>
-                    </div>
-                    <div class="apartments__item">
-                        <p class="apartments__title">евродвушка<br>
-                                <span>от 39,59 до 40,55 м2</span></p>
-                        <img src="img/5.svg" alt="" class="apartments__img">
-                        <a href="javascript:void(0)" class="apartments__btn btn btn-blue" data-modal="apartmentse2">Узнать подробнее</a>
-                    </div>
-                    <div class="apartments__item">
-                        <p class="apartments__title">евротрёшка<br>
-                                <span>от 53,40 до 54,45 м2</span></p>
-                        <img src="img/6.svg" alt="" class="apartments__img">
-                        <a href="javascript:void(0)" class="apartments__btn btn btn-blue" data-modal="apartmentse3">Узнать подробнее</a>
-                    </div>
+                <div class="swiper-slide apartments__item">
+                    <p class="apartments__title">2-комнатные <br>
+                            <span>от 48,69 до 50,54 м2</span></p>
+                    <img src="img/2.svg" alt="" class="apartments__img">
+                    <a href="javascript:void(0)" class="apartments__btn btn btn-blue" data-modal="apartments2">Узнать подробнее</a>
                 </div>
-                <div class="swiper-slide full">
-                    <div class="apartments__item">
-                        <p class="apartments__title"><span>Кладовые от 2,83 до 5,67 м2</span></p>
-                        <img src="img/pantry.png" alt="" class="apartments__img">
-                        <a href="javascript:void(0)" class="apartments__btn btn btn-blue" data-modal="pantry">Выбрать кладовую</a>
-                    </div>
+                <div class="swiper-slide apartments__item">
+                    <p class="apartments__title">3-комнатные <br>
+                            <span>от 59,12 до 60,32 м2</span></p>
+                    <img src="img/3.svg" alt="" class="apartments__img">
+                    <a href="javascript:void(0)" class="apartments__btn btn btn-blue" data-modal="apartments3">Узнать подробнее</a>
+                </div>
+                <div class="swiper-slide apartments__item">
+                    <p class="apartments__title">студия<br>
+                        <span>от 20,75 до 25,40 м2</span></p>
+                    <img src="img/4.svg" alt="" class="apartments__img">
+                    <a href="javascript:void(0)" class="apartments__btn btn btn-blue" data-modal="apartmentss">Узнать подробнее</a>
+                </div>
+                <div class="swiper-slide apartments__item">
+                    <p class="apartments__title">евродвушка<br>
+                            <span>от 39,59 до 40,55 м2</span></p>
+                    <img src="img/5.svg" alt="" class="apartments__img">
+                    <a href="javascript:void(0)" class="apartments__btn btn btn-blue" data-modal="apartmentse2">Узнать подробнее</a>
+                </div>
+                <div class="swiper-slide apartments__item">
+                    <p class="apartments__title">евротрёшка<br>
+                            <span>от 53,40 до 54,45 м2</span></p>
+                    <img src="img/6.svg" alt="" class="apartments__img">
+                    <a href="javascript:void(0)" class="apartments__btn btn btn-blue" data-modal="apartmentse3">Узнать подробнее</a>
+                </div>
+                <div class="swiper-slide full apartments__item">
+                    <p class="apartments__title"><span>Кладовые от 2,83 до 5,67 м2</span></p>
+                    <img src="img/pantry.png" alt="" class="apartments__img">
+                    <a href="javascript:void(0)" class="apartments__btn btn btn-blue" data-modal="pantry">Выбрать кладовую</a>
                 </div>
             </div>
 
@@ -400,8 +428,8 @@
 
         <nav>
             <a href="javascript:void(0)" data-slider="1">Студия</a>
-            <a class="active" href="javascript:void(0)" data-slider="2">1-комнатная</a>
-            <a href="javascript:void(0)" data-slider="3">Евродвушка</a>
+            <a class="active" href="javascript:void(0)" data-slider="2"><span class="full">1-комнатная</span><span class="mobile">1-комн.</span></a>
+            <a href="javascript:void(0)" data-slider="3"><span class="full">Евродвушка</span><span class="mobile">2-евро</span></a>
         </nav>
 
         <div class="sliders">
@@ -425,13 +453,13 @@
         <div class="flex">
             <div data-modal="design" style="cursor: pointer">
                 <svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-interior-design"></use></svg>
-                <span>Заказать индивидуальный <br>
+                <span>Заказать <span class="mobile">индивидуальный</span> <br>
                         дизайн-проект</span>
             </div>
             <div>
                 <svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-download"></use></svg>
-                <span>Скачать типовой дизайн-проект <br>
-                        1-комнатной квартиры</span>
+                <span>Скачать типовой <span class="mobile">дизайн-</span>проект <br>
+                    <span class="mobile">1-комнатной квартиры</span></span>
             </div>
         </div>
     </div>
@@ -500,7 +528,8 @@
 <section class="variants" id="otdelka" data-scroll="variants">
     <div class="container">
         <h2>варианты отделки</h2>
-        <div class="item">
+        <div class="toggle active" data-toggle="1">ПРЕДЧИСТОВАЯ</div>
+        <div class="item active" data-toggle="1">
             <div class="info">
                 <p><strong><span>ПРЕДЧИСТОВАЯ —</span> <br> Квартира полностью готова к финишной отделке. <br>
                      Профессионально выполненные сложные черновые <br>
@@ -527,7 +556,9 @@
                 <div class="s1-prev swiper-button-prev"></div> -->
             </div>
         </div>
-        <div class="item">
+
+        <div class="toggle" data-toggle="2">ОНИКС СТАНДАРТ</div>
+        <div class="item" data-toggle="2">
             <div class="info">
                 <p><strong><span>ОНИКС СТАНДАРТ —</span> <br> Квартира с отделкой по дизайн-проекту готова к <br>
                      проживанию сразу после сдачи дома. <br>
@@ -556,7 +587,9 @@
                 <div class="s2-prev swiper-button-prev"></div> -->
             </div>
         </div>
-        <div class="item">
+
+        <div class="toggle" data-toggle="3">ОНИКС КОМФОРТ</div>
+        <div class="item" data-toggle="3">
             <div class="info">
                 <p><strong><span>ОНИКС КОМФОРТ —</span> <br> Чистовая отделка Комфорт-класса производится по <br>
                      специально разработанному дизайн-проекту, а <br>
@@ -598,8 +631,9 @@
             <a href="javascript:void(0)" data-tab="gos">госпрограммы</a>
         </nav>
         <div class="ways__body">
-            <div class="active ways__tab" id="ipoteka" data-tab="mortgage">
-                <p class="ways__title">выгодные условия ипотеки!</p>
+            <div class="toggle active" data-toggle="1">ИПОТЕКА</div>
+            <div class="active ways__tab" id="ipoteka" data-toggle="1" data-tab="mortgage">
+                <p class="ways__title">выгодные условия <span class="mobile">ипотеки</span>!</p>
                 <p>Максимально выгодные условия от ведущих банков-партнёров: ставка от 5%; <br>
                         первоначальный взнос от 10%. <br><br>
                         
@@ -613,28 +647,38 @@
                     <div class="ways__bank"><div><img src="img/metallinvest.png" width="103" alt=""></div><span>ставка от 5,5%</span></div>
                 </div>
                 <p><strong>Рассчитать и подобрать выгодный для вас ипотечный кредит помогут наши специалисты</strong></p>
+                <a href="javascript:void(0)" class="btn btn-gray" data-modal="mortgage">Рассчитать</a>
             </div>
-            <div class="ways__tab" id="rasrochka" data-tab="installment">
+
+            <div class="toggle" data-toggle="2">РАССРОЧКА</div>
+            <div class="ways__tab" id="rasrochka" data-toggle="2" data-tab="installment">
                 <p class="ways__title">рассрочка 0%!</p>
                 <p><strong>Воспользуйтесь беспроцентной рассрочкой от застройщика для приобретения любой <br>
                      квартиры.</strong></p>
                 <p>Первоначальный взнос не менее 20% от стоимости приобретаемой квартиры. На оставшуюся <br>
                      сумму согласуем индивидуальный график платежей. Рассрочка возможна на любой срок, не <br>
                       превышающий 1 мая 2021 г.</p>
+                <a href="javascript:void(0)" class="btn btn-gray" data-modal="installment">Отправить заявку</a>
             </div>
-            <div class="ways__tab" data-tab="tradein">
+
+            <div class="toggle" data-toggle="3">TRADE-IN</div>
+            <div class="ways__tab" data-toggle="3" data-tab="tradein">
                 <h4>Приобретайте новую квартиру по программе «Trade-in».</h4>
                 <p>Наши специалисты осуществят продажу вашей квартиры в наиболее короткие сроки по <br>
                      согласованной с вами цене. И в это же время договор с минимальным первоначальным <br>
                       взносом в 5% от стоимости приобретаемой квартиры, зафиксирует цену и квартиру за вами. </p>
                 <p><strong>Юридическое сопровождение купли-продажи и услуга оценки - бесплатные.</strong></p>
+                <a href="javascript:void(0)" class="btn btn-gray" data-modal="tradein">Отправить заявку</a>
             </div>
-            <div class="ways__tab" data-tab="gos">
+
+            <div class="toggle" data-toggle="4">ГОСПРОГРАММЫ</div>
+            <div class="ways__tab" data-toggle="4" data-tab="gos">
                 <h4>Используйте в оплате все виды сертификатов <br> и материнский капитал.</h4>
                 <p>Поможем выбрать оптимальный вариант использования материнского капитала с учетом ваших <br>
                      интересов. Возможно использовать как первоначальный взнос по ипотеке, рассрочке или <br>
                       единовременной оплате за квартиру. </p>
                 <p>При необходимости наши специалисты помогут скомбинировать разные варианты оплаты в <br> одной сделке.</p>
+                <a href="javascript:void(0)" class="btn btn-gray" data-modal="gos">Отправить заявку</a>
             </div>
         </div>
         <a href="javascript:void(0)" class="btn btn-gray" data-modal="mortgage">Рассчитать</a>
@@ -648,19 +692,21 @@
         <h3>Мы используем НОВЫЙ БЕЗОПАСНЫЙ инструмент расчетов по ДДУ — <br>
             <span>СЧЕТА ЭСКРОУ</span></h3>
 
+            <a href="javascript:void(0)" class="btn btn-blue" data-modal="eskr">Подробнее</a>
+
             <div class="flex">
                 <div class="item"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-insurance"></use></svg><span>Денежные средства на <br>
-                        СЧЕТАХ ЭСКРОУ <br>
-                        застрахованы АСВ <br>
-                        в размере до 10 млн. руб.</span></div>
+                    СЧЕТАХ ЭСКРОУ <br>
+                    застрахованы АСВ <br>
+                    в размере до 10 млн. руб.</span></div>
                 <div class="item"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-pay"></use></svg><span>Денежные средства <br>
-                        перечисляются застройщику <br>
-                        после ввода дома <br>
-                        в эксплуатацию</span></div>
+                    перечисляются застройщику <br>
+                    после ввода дома <br>
+                    в эксплуатацию</span></div>
                 <div class="item"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-untitled"></use></svg><span>Банк НЕ ВЗЫМАЕТ <br>
-                        вознаграждение <br>
-                        с покупателя за открытие <br>
-                        и сопровождение счета</span></div>
+                    вознаграждение <br>
+                    с покупателя за открытие <br>
+                    и сопровождение счета</span></div>
             </div>
     </div>
 </section>
@@ -715,10 +761,11 @@
     <div class="container">
         <h2>О застройщике</h2>
         <div class="flex">
-            <img src="img/onix.svg" width="219" alt="">
+            <img src="img/onix.svg" class="desktop" width="219" alt="">
+            <img src="img/onix-mobile.svg" class="mobile" width="219" alt="">
             <div>
                 <p><strong>Новые стандарты качества в строительстве от группы компаний «Оникс»</strong> <br> <br>
-                Группа компаний Оникс - профессионал на рынке строительства Перми. За плечами годы успешного опыта в сфере коммерческой недвижимости. Строительным подразделением группы, начиная с 2011 года, успешно реализовано более 10-ти проектов зданий различного назначения, в том числе под обязательным Государственным строительным надзором, среди объектов: ТЦ «Браво» (ул. Светлогорская,20), ТЦ «Краснов» (ул. Солдатова, 28а), Автосалон «KIA» (ул. Спешилова, 77), офисное здание по ул. Островского, 44а, и т.д. Это примеры реализации проектов, где воплотился целостный подход к строительству, в котором сочетаются и продуманная архитектура, грамотная организация общественного пространства и благоустройство среды . Объекты, которые показывают, что группа компаний Оникс – успешный застройщик, постоянно улучшающий стандарты работы, свои продукты в целом, и городскую среду. Накопленный опыт, уверенность в своих силах и команда грамотных проектировщиков и архитекторов определили следующую цель для группы компаний - жилое, многоэтажное строительство.</p>
+                Группа компаний Оникс - профессионал на рынке строительства Перми. За плечами годы успешного опыта в сфере коммерческой недвижимости. Строительным подразделением группы, начиная с 2011 года, успешно реализовано более 10-ти проектов зданий <span class="mobile"> различного назначения, в том числе под обязательным Государственным строительным надзором, среди объектов: ТЦ «Браво» (ул. Светлогорская,20), ТЦ «Краснов» (ул. Солдатова, 28а), Автосалон «KIA» (ул. Спешилова, 77), офисное здание по ул. Островского, 44а, и т.д. Это примеры реализации проектов, где воплотился целостный подход к строительству, в котором сочетаются и продуманная архитектура, грамотная организация общественного пространства и благоустройство среды . Объекты, которые показывают, что группа компаний Оникс – успешный застройщик, постоянно улучшающий стандарты работы, свои продукты в целом, и городскую среду. Накопленный опыт, уверенность в своих силах и команда грамотных проектировщиков и архитекторов определили следующую цель для группы компаний - жилое, многоэтажное строительство.</span></p>
             </div>
         </div>
         <div class="company__documents">
@@ -726,7 +773,7 @@
             <div class="company__forms">
                 <div class="documents">
                     <div class="documents__item">
-                        <p class="documents__toggle">Информация об объекте строительства</p>
+                        <p class="documents__toggle"><span class="mobile">Информация</span> об объекте строительства</p>
 
                         <nav class="documents__body">
                             <a href="docs/egrn.pdf" target="_blank">
@@ -775,7 +822,7 @@
             <h2>ход строительства</h2>
             <div class="ready">
                 <span class="desc">Степень готовности</span>
-                <span class="count">19%</span>
+                <span class="count">21%</span>
                 <div class="bar"><span></span></div>
             </div>
         </div>
@@ -851,6 +898,12 @@
 
         <div class="company-next swiper-button-next"></div>
         <div class="company-prev swiper-button-prev"></div>
+
+        <div class="mobile">
+            <p><strong>Август</strong> 2019</p>
+            <div style="background-image: url('img/PANO_20190801_091534.jpg')"></div>
+            <a href="javascript:void(0)" class="btn btn-gray" data-modal="steps">Перейти в раздел</a>
+        </div>
     </div>
 </section>
 
@@ -1603,6 +1656,62 @@
         <p class="modal__title">Заявка отправлена</p>
         <p>Мы свяжемся с вами в ближайшее <br> время</p>
         <a href="javascript:void(0)" class="btn">Закрыть</a>
+    </div>
+
+    <div class="modal" data-modal="solutions">
+        <div class="modal__close"></div>
+        <p class="modal__title">Выгодные <br> решения</p>
+
+        <a href="javascript:void(0)" class="btn modal__close btn-gray">Закрыть</a>
+    </div>
+
+    <div class="modal" data-modal="solutions2">
+        <div class="modal__close"></div>
+        <p class="modal__title">Расположен <br> для жизни</p>
+
+        <a href="javascript:void(0)" class="btn modal__close btn-gray">Закрыть</a>
+    </div>
+
+    <div class="modal" data-modal="eskr">
+        <div class="modal__close"></div>
+        <p class="modal__title">Мы используем НОВЫЙ БЕЗОПАСНЫЙ инструмент расчетов по ДДУ — <br>
+            <span>СЧЕТА ЭСКРОУ</span></p>
+
+        <a href="javascript:void(0)" class="btn modal__close btn-gray">Закрыть</a>
+    </div>
+
+    <div class="modal" data-modal="steps">
+        <div class="modal__close"></div>
+        <p class="modal__title">Ход строительства</p>
+
+        <div class="year">
+            <span>Год:</span>
+            <nav>
+                <a href="javascript:void(0)" class="active" data-tab="2019">2019</a>
+                <a href="javascript:void(0)" disable data-tab="2020">2020</a>
+                <a href="javascript:void(0)" disable data-tab="2021">2021</a>
+            </nav>
+        </div>
+
+        <div class="month">
+            <span>Месяц:</span>
+            <nav>
+                <a href="javascript:void(0)" disable>01</a>
+                <a href="javascript:void(0)" disable>02</a>
+                <a href="javascript:void(0)" disable>03</a>
+                <a href="javascript:void(0)" disable>04</a>
+                <a href="javascript:void(0)" data-tab="19may">05</a>
+                <a href="javascript:void(0)" data-tab="19june">06</a>
+                <a href="javascript:void(0)" data-tab="19july">07</a>
+                <a href="javascript:void(0)" class="active" data-tab="19august">08</a>
+                <a href="javascript:void(0)" disable>09</a>
+                <a href="javascript:void(0)" disable>10</a>
+                <a href="javascript:void(0)" disable>11</a>
+                <a href="javascript:void(0)" disable>12</a>
+            </nav>
+        </div>
+
+        <a href="javascript:void(0)" class="btn modal__close btn-gray">Закрыть</a>
     </div>
 
 </div>
